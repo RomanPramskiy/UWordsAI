@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
     body {
-        background-color: black;
+        background-color: #1A1A1A;
     }
     .container {
         max-width: 1200px;
@@ -27,14 +27,19 @@
     .logo-header-about-yellow {
         color: #DDFF53;
     }
+    .header__link:hover {
+        color: #DDFF53;
+    }
     .header__links {
         display: flex;
         gap: 35px;
+        flex-wrap: wrap;
     }
     .header__link {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 20px;
         text-transform: uppercase;
+        transition: all 0.2s;
     }
     .header__button-download {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -46,17 +51,20 @@
         text-transform: uppercase;
         margin-left: auto;
     }
+    .header__dropdown-menu {
+        display: none;
+    }
     .main {
         flex-grow: 1;
     }
-    .main__about-yellow-block {
+    .main__learn {
         background-color: #DDFF53;
         width: 100%;
         height: 500px;
         border-radius: 30px;
         margin-top: 20px;
     }
-    .main__about-yellow-block-title {
+    .main__learn-title {
         font-family: "AvenirNextCyr-Bold", sans-serif;
         font-size: 128px;
     }
@@ -64,40 +72,82 @@
         margin-top: 40px;
         height: 664px;
     }
-    .footer__social-image1 {
+    .footer__background-image {
         position: absolute;
         object-fit: cover;
         z-index: -1;
+        bottom: 0;
+        max-width: 100%;
+    }
+    .footer__woman-image {
+        position: absolute;
+        bottom: 0;
+    }
+    .footer__inner {
+        position: relative;
+    }
+    .footer__link-mail-block {
+        width: 100%;
+       text-align: end;
     }
     .footer__social-links {
         display: flex;
-        margin-left: 500px;
+        justify-content: flex-end;
+        margin-bottom: 140px;
+        margin-right: 110px;
     }
-    .footer__links {
+    .footer__social-link {
+        margin-left: 20px;
+    }
+    .footer__links-inner {
         display: flex;
         flex-direction: column;
     }
+    .footer__links-inner1 {
+        margin-left: auto
+    }
+    .footer__links {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
     .footer__link {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 24px;
+        margin-left: auto;
+        text-transform: uppercase;
+        width: 100%;
+        margin-bottom: 20px;
     }
     .footer__link-mail {
         font-family: "AvenirNextCyr-Bold", sans-serif;
-        font-size: 64px;
+        font-size: 50px;
         color: #DDFF53;
+        margin: 0 45px 10px auto;
     }
     .footer__title {
         font-family: "AvenirNextCyr-Bold", sans-serif;
-        font-size: 128px;
+        font-size: 115px;
         color: black;
         -webkit-text-stroke: 2px gray;
-        -webkit-text-fill-color: black;
+        -webkit-text-fill-color: #1A1A1A;
         position: absolute;
+        bottom: 400px;
+        left: 30px;
     }
+    .footer__download-images {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 80px;
+        margin-bottom: 250px;
+    }
+
 }
 @media (max-width: 1200px) {
     body {
-        background-color: black;
+        background-color: #1A1A1A;
     }
     .container {
         max-width: 1200px;
@@ -124,14 +174,19 @@
     .logo-header-about-yellow {
         color: #DDFF53;
     }
+    .header__link:hover {
+        color: #DDFF53;
+    }
     .header__links {
         display: flex;
         gap: 35px;
+        flex-wrap: wrap;
     }
     .header__link {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 20px;
         text-transform: uppercase;
+        transition: all 0.2s;
     }
     .header__button-download {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -143,17 +198,20 @@
         text-transform: uppercase;
         margin-left: auto;
     }
+    .header__dropdown-menu {
+        display: none;
+    }
     .main {
         flex-grow: 1;
     }
-    .main__about-yellow-block {
+    .main__learn {
         background-color: #DDFF53;
         width: 100%;
         height: 500px;
         border-radius: 30px;
         margin-top: 20px;
     }
-    .main__about-yellow-block-title {
+    .main__learn-title {
         font-family: "AvenirNextCyr-Bold", sans-serif;
         font-size: 128px;
     }
@@ -161,35 +219,76 @@
         margin-top: 40px;
         height: 664px;
     }
-    .footer__social-image1 {
+    .footer__background-image {
         position: absolute;
         object-fit: cover;
         z-index: -1;
+        bottom: 0;
+        max-width: 100%;
+    }
+    .footer__woman-image {
+        position: absolute;
+        bottom: 0;
+    }
+    .footer__inner {
+        position: relative;
+    }
+    .footer__link-mail-block {
+        width: 100%;
+       text-align: end;
     }
     .footer__social-links {
         display: flex;
-        margin-left: 500px;
+        justify-content: flex-end;
+        margin-bottom: 100px;
+        margin-right: 20px;
     }
-    .footer__links {
+    .footer__social-link {
+        margin-left: 20px;
+    }
+    .footer__links-inner {
         display: flex;
         flex-direction: column;
     }
+    .footer__links-inner1 {
+        margin-left: auto
+    }
+    .footer__links {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
     .footer__link {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 24px;
+        margin-left: auto;
+        text-transform: uppercase;
+        width: 100%;
+        margin-bottom: 20px;
     }
     .footer__link-mail {
         font-family: "AvenirNextCyr-Bold", sans-serif;
-        font-size: 64px;
+        font-size: 50px;
         color: #DDFF53;
+        margin: 0 45px 10px auto;
     }
     .footer__title {
         font-family: "AvenirNextCyr-Bold", sans-serif;
-        font-size: 128px;
+        font-size: 115px;
         color: black;
         -webkit-text-stroke: 2px gray;
-        -webkit-text-fill-color: black;
+        -webkit-text-fill-color: #1A1A1A;
         position: absolute;
+        bottom: 400px;
+        left: 30px;
+    }
+    .footer__download-images {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 80px;
+        margin-bottom: 250px;
     }
 }
 @media (max-width: 1024px) {
@@ -201,6 +300,36 @@
     }
     .logo-header-about {
         font-size: 26px;
+    }
+    .footer__link-mail {
+        font-size: 30px;
+        width: 100px;
+        margin-left: auto;
+    }
+    .footer__background-image {
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .footer__title {
+        font-size: 128px;
+        bottom: 400px;
+        left: 10px;
+    }
+    .footer__link {
+        font-size: 18px;
+    }
+    .footer__links {
+        gap: 10px;
+    }
+    .footer__title {
+        font-size: 89px;
+    }
+    .footer__social-download-image {
+        max-width: 210px;
+        height: auto;
+    }
+    .footer__social-links {
+        margin-bottom: 220px;
     }
 }
 @media (max-width: 768px) {
@@ -227,5 +356,48 @@
         width: 20px;
         height: 3px;
         border-radius: 15px;
+        transition: all 0.2s ease-in-out;
+    }
+    .header__dropdown-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 105px;
+        right: 0;
+        background-color: #1A1A1A;
+        width: 100%;
+        height: 100%;
+    }
+    .header__link-dropdown {
+        color: #F2ECE7;
+        background-color: #1A1A1A;
+        padding: 20px;
+        margin-left: auto;
+    }
+    .header__button-download-dropdown {
+        font-family: "AvenirNextCyr-Bold", sans-serif;
+        background-color: #DDFF53;
+        border-radius: 50px;
+        padding: 8px 15px;
+        color: black;
+        font-size: 20px;
+        text-transform: uppercase;
+        max-width: 130px;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    .header__dropdown-menu.active {
+        display: flex;
+    }
+    .header__lines.active .header__line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .header__lines.active .header__line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .header__lines.active .header__line:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
     }
 }
