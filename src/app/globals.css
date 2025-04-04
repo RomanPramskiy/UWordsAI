@@ -23,16 +23,18 @@ html {
 
 html, body {
   height: 100%;
-  color: #151515;
+  color: #1A1A1A;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  text-transform: uppercase;
+  background-color: #1A1A1A;
 }
 
 *, *::after, *::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 a {
@@ -50,8 +52,8 @@ button {
 }
 
 li, ul {
-  list-style: none;
-  list-style-type: none;
+  list-style: disc;
+  list-style-type: disc;
 }
 hr {
   border: none;
