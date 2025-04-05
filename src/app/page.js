@@ -12,22 +12,187 @@ import BlocknoteCenter from './components/BlocknoteCenter';
 import BlocknoteRight from './components/BlocknoteRight';
 import React from "react";
 import { motion } from "framer-motion";
-import { useState } from "react";
-
-const rowLeft = () => ({
-  animate: {
-    x: ["0%", "-100%"],
-    transition: { repeat: Infinity, repeatType: "loop", duration: 100, ease: "linear" }
-  }
-});
-const rowRight = () => ({
-  animate: {
-    x: ["-100%", "0%"],
-    transition: { repeat: Infinity, repeatType: "loop", duration: 100, ease: "linear" }
-  }
-});
 
 export default function Home() {
+  const blocks = [
+    {
+      backgroundColor: "#302F2E",
+      soundImage: "/images/main__smartphone-sound-white.svg",
+      titleClasses: "main__smartphone-block-title main__smartphone-block-title-white",
+      blockClasses: "main__smartphone-block-inner main__smartphone-block-inner-white",
+      title: "art",
+      text: "искусство",
+      image: "/images/main__smartphone-art.png",
+      alt: "art"
+    },
+    {
+      backgroundColor: "#E86BBB",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "present",
+      text: "подарок",
+      image: "/images/main__smartphone-present.png",
+      alt: "present"
+    },
+    {
+      backgroundColor: "#FFCF77",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "glasses",
+      text: "очки",
+      image: "/images/main__smartphone-glasses.png",
+      alt: "glasses"
+    },
+    {
+      backgroundColor: "#9DDADB",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "shop",
+      text: "магазин",
+      image: "/images/main__smartphone-shop.png",
+      alt: "shop"
+    }
+  ];
+  const blocks2 = [
+    {
+      backgroundColor: "#FDEA6B",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "rocket",
+      text: "ракета",
+      image: "/images/main__smartphone-rocket.png",
+      alt: "rocket"
+    },
+    {
+      backgroundColor: "#78E185",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "Apple",
+      text: "яблоко",
+      image: "/images/main__smartphone-apple.png",
+      alt: "apple"
+    },
+    {
+      backgroundColor: "#302F2E",
+      soundImage: "/images/main__smartphone-sound-white.svg",
+      titleClasses: "main__smartphone-block-title main__smartphone-block-title-white",
+      blockClasses: "main__smartphone-block-inner main__smartphone-block-inner-white",
+      title: "Orange",
+      text: "Апельсин",
+      image: "/images/main__smartphone-orange.png",
+      alt: "orange"
+    },
+    {
+      backgroundColor: "#DB79E2",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "Notebook",
+      text: "Блокнот",
+      image: "/images/main__smartphone-notebook.png",
+      alt: "notebook"
+    }
+  ];
+  const blocks3 = [
+    {
+      backgroundColor: "#302F2E",
+      soundImage: "/images/main__smartphone-sound-white.svg",
+      titleClasses: "main__smartphone-block-title main__smartphone-block-title-white",
+      blockClasses: "main__smartphone-block-inner main__smartphone-block-inner-white",
+      title: "balloon",
+      text: "шарик",
+      image: "/images/main__smartphone-balloon.png",
+      alt: "balloon"
+    },
+    {
+      backgroundColor: "#8FA7DF",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "Laptop",
+      text: "ноутбук",
+      image: "/images/main__smartphone-laptop.png",
+      alt: "Laptop"
+    },
+    {
+      backgroundColor: "#E78276",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "lamp",
+      text: "лампа",
+      image: "/images/main__smartphone-lamp.png",
+      alt: "lamp"
+    },
+    {
+      backgroundColor: "#EC7495",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "dress",
+      text: "платье",
+      image: "/images/main__smartphone-dress.png",
+      alt: "dress"
+    }
+  ];
+  const blocks4 = [
+    {
+      backgroundColor: "#9FD8E5",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "bag",
+      text: "сумка",
+      image: "/images/main__smartphone-bag.png",
+      alt: "bag"
+    },
+    {
+      backgroundColor: "#FDEA6B",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "love",
+      text: "любовь",
+      image: "/images/main__smartphone-love.png",
+      alt: "love"
+    },
+    {
+      backgroundColor: "#FFCF77",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "lipstick",
+      text: "помада",
+      image: "/images/main__smartphone-lipstick.png",
+      alt: "lipstick"
+    },
+    {
+      backgroundColor: "#302F2E",
+      soundImage: "/images/main__smartphone-sound-white.svg",
+      titleClasses: "main__smartphone-block-title main__smartphone-block-title-white",
+      blockClasses: "main__smartphone-block-inner main__smartphone-block-inner-white",
+      title: "T-shirt",
+      text: "футболка",
+      image: "/images/main__smartphone-shop.png",
+      alt: "T-shirt"
+    },
+    {
+      backgroundColor: "#9DDADB",
+      soundImage: "/images/main__smartphone-sound-black.svg",
+      titleClasses: "main__smartphone-block-title",
+      blockClasses: "main__smartphone-block-inner",
+      title: "shop",
+      text: "магазин",
+      image: "/images/main__smartphone-shop.png",
+      alt: "shop"
+    }
+  ];
+
   return (
     <div className="wrapper">
       <Header></Header>
@@ -194,209 +359,71 @@ export default function Home() {
 
 
 
-
-
           <section className="main__smartphone">
-          <Image src="/images/main__smartphone-smartphone.svg" alt="smartphone" width={1440} height={850} className="main__smartphone-big-image"></Image>
+          <Image src="/images/main__smartphone-smartphone.svg" alt="smartphone" width={1440} height={950} className="main__smartphone-big-image"></Image>
 
             <div className='main__smartphone-block'>
             <motion.div className="row"
-                animate={{ x: ["-100%", "0%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 10, ease: "linear" }}
+                animate={{ x: ["0%", "-100%"] }} 
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
              >
-    
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#302F2E" }}>
-              <Image src="/images/main__smartphone-sound-white.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title main__smartphone-block-title-white'>art</h2>
-                <p className='main__smartphone-block-text'>искусство</p>
-               <Image src="/images/main__smartphone-art.png" alt="art" width={80} height={70} className="main__smartphone-association-image"></Image>
+      {[...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks].map((block, index) => (
+              <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
+              <Image src={block.soundImage} alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
+                <h2 className={block.titleClasses}>{block.title}</h2>
+                <p className='main__smartphone-block-text'>{block.text}</p>
+               <Image src={block.image} alt={block.alt} width={80} height={70} className="main__smartphone-association-image"></Image>
               </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#E86BBB" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>present</h2>
-                <p className='main__smartphone-block-text'>подарок</p>
-               <Image src="/images/main__smartphone-present.png" alt="present" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#FFCF77" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>glasses</h2>
-                <p className='main__smartphone-block-text'>очки</p>
-               <Image src="/images/main__smartphone-glasses.png" alt="glasses" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#9DDADB" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>shop</h2>
-                <p className='main__smartphone-block-text'>магазин</p>
-               <Image src="/images/main__smartphone-shop.png" alt="shop" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
+        ))}
             </motion.div>
             </div>
-
-
             <div className='main__smartphone-block'>
-            <motion.div className="row" 
-                            animate={{ x: ["-100%", "0%"] }} 
-                            transition={{ repeat: Infinity, repeatType: "loop", duration: 10, ease: "linear" }}
-            >
-            <div className='main__smartphone-block-inner' style={{ backgroundColor: "#FDEA6B" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>rocket</h2>
-                <p className='main__smartphone-block-text'>ракета</p>
-               <Image src="/images/main__smartphone-rocket.png" alt="rocket" width={80} height={70} className="main__smartphone-association-image"></Image>
+            <motion.div className="row"
+                animate={{ x: ["-100%", "0%"] }} 
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
+             >
+      {[...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2].map((block, index) => (
+              <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
+              <Image src={block.soundImage} alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
+                <h2 className={block.titleClasses}>{block.title}</h2>
+                <p className='main__smartphone-block-text'>{block.text}</p>
+               <Image src={block.image} alt={block.alt} width={80} height={70} className="main__smartphone-association-image"></Image>
               </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#78E185" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>Apple</h2>
-                <p className='main__smartphone-block-text'>яблоко</p>
-               <Image src="/images/main__smartphone-apple.png" alt="apple" width={80} height={70} className="main__smartphone-association-image"></Image>
+        ))}
+            </motion.div>
+            </div>
+            <div className='main__smartphone-block'>
+            <motion.div className="row"
+                animate={{ x: ["0%", "-100%"] }} 
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
+             >
+      {[...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3].map((block, index) => (
+              <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
+              <Image src={block.soundImage} alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
+                <h2 className={block.titleClasses}>{block.title}</h2>
+                <p className='main__smartphone-block-text'>{block.text}</p>
+               <Image src={block.image} alt={block.alt} width={80} height={70} className="main__smartphone-association-image"></Image>
               </div>
-
-
-              <div className='main__smartphone-block-inner main__smartphone-block-inner-white' style={{ backgroundColor: "#302F2E" }}>
-              <Image src="/images/main__smartphone-sound-white.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title main__smartphone-block-title-white'>Orange</h2>
-                <p className='main__smartphone-block-text'>Апельсин</p>
-               <Image src="/images/main__smartphone-orange.png" alt="orange" width={80} height={70} className="main__smartphone-association-image"></Image>
+        ))}
+            </motion.div>
+            </div>
+            <div className='main__smartphone-block'>
+            <motion.div className="row"
+                animate={{ x: ["-100%", "0%"] }} 
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
+             >
+      {[...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4].map((block, index) => (
+              <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
+              <Image src={block.soundImage} alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
+                <h2 className={block.titleClasses}>{block.title}</h2>
+                <p className='main__smartphone-block-text'>{block.text}</p>
+               <Image src={block.image} alt={block.alt} width={80} height={70} className="main__smartphone-association-image"></Image>
               </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#DB79E2" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>Notebook</h2>
-                <p className='main__smartphone-block-text'>Блокнот</p>
-               <Image src="/images/main__smartphone-notebook.png" alt="notebook" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
+        ))}
             </motion.div>
             </div>
 
             
-            <div className='main__smartphone-block'>
-            <motion.div className="row" animate={{ x: ["0%", "-50%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 10, ease: "linear" }}
-            >
-            <div className='main__smartphone-block-inner main__smartphone-block-inner-white' style={{ backgroundColor: "#302F2E" }}>
-              <Image src="/images/main__smartphone-sound-white.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title main__smartphone-block-title-white'>balloon</h2>
-                <p className='main__smartphone-block-text'>шарик</p>
-               <Image src="/images/main__smartphone-balloon.png" alt="balloon" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#8FA7DF" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>Laptop</h2>
-                <p className='main__smartphone-block-text'>ноутбук</p>
-               <Image src="/images/main__smartphone-laptop.png" alt="laptop" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#E78276" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>lamp</h2>
-                <p className='main__smartphone-block-text'>лампа</p>
-               <Image src="/images/main__smartphone-lamp.png" alt="lamp" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#EC7495" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>dress</h2>
-                <p className='main__smartphone-block-text'>платье</p>
-               <Image src="/images/main__smartphone-dress.png" alt="dress" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-
-
-
-              <div className='main__smartphone-block-inner main__smartphone-block-inner-white' style={{ backgroundColor: "#302F2E" }}>
-              <Image src="/images/main__smartphone-sound-white.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title main__smartphone-block-title-white'>balloon</h2>
-                <p className='main__smartphone-block-text'>шарик</p>
-               <Image src="/images/main__smartphone-balloon.png" alt="balloon" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#8FA7DF" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>Laptop</h2>
-                <p className='main__smartphone-block-text'>ноутбук</p>
-               <Image src="/images/main__smartphone-laptop.png" alt="laptop" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#E78276" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>lamp</h2>
-                <p className='main__smartphone-block-text'>лампа</p>
-               <Image src="/images/main__smartphone-lamp.png" alt="lamp" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#EC7495" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>dress</h2>
-                <p className='main__smartphone-block-text'>платье</p>
-               <Image src="/images/main__smartphone-dress.png" alt="dress" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-            </motion.div>
-            </div>
-
-
-            <div className='main__smartphone-block'>
-            <motion.div className="row" 
-                            animate={{ x: ["0%", "100%"] }} 
-                            transition={{ repeat: Infinity, repeatType: "loop", duration: 10, ease: "linear" }}
-            >
-            <div className='main__smartphone-block-inner' style={{ backgroundColor: "#9FD8E5" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>bag</h2>
-                <p className='main__smartphone-block-text'>сумка</p>
-               <Image src="/images/main__smartphone-bag.png" alt="bag" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#FDEA6B" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>love</h2>
-                <p className='main__smartphone-block-text'>любовь</p>
-               <Image src="/images/main__smartphone-love.png" alt="love" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#FFCF77" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>lipstick</h2>
-                <p className='main__smartphone-block-text'>помада</p>
-               <Image src="/images/main__smartphone-lipstick.png" alt="lipstick" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner main__smartphone-block-inner-white' style={{ backgroundColor: "#302F2E" }}>
-              <Image src="/images/main__smartphone-sound-white.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title main__smartphone-block-title-white'>T-shirt</h2>
-                <p className='main__smartphone-block-text'>футболка</p>
-               <Image src="/images/main__smartphone-t-shirt.png" alt="t-shirt" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-
-
-              <div className='main__smartphone-block-inner' style={{ backgroundColor: "#9DDADB" }}>
-              <Image src="/images/main__smartphone-sound-black.svg" alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
-                <h2 className='main__smartphone-block-title'>shop</h2>
-                <p className='main__smartphone-block-text'>магазин</p>
-               <Image src="/images/main__smartphone-shop.png" alt="shop" width={80} height={70} className="main__smartphone-association-image"></Image>
-              </div>
-            </motion.div>
-            </div>
           </section>
 
 
@@ -410,9 +437,13 @@ export default function Home() {
             <h1 className='white-text-128 main__blog-title'>БЛОГ</h1>
             <div className='main__blog-text-block'>
               <p className='gray-text-24 main__blog-text'>Новые идеи и полезные советы<br></br> для изучения английского с AI<br></br> от нашей команды 👪</p>
+              <div className='main__blog-link-block main__blog-link-block1'>
               <Link href="/blog" className="white-text-32 main__blog-link">перейти в блог</Link>
+              </div>
               <Slider></Slider>
+              <div className='main__blog-link-block main__blog-link-block2'>
               <Link href="/blog" className="white-text-32 main__blog-link2">перейти в блог</Link>
+              </div>
             </div>
           </section>
       </div>

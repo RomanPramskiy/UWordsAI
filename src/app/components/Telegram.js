@@ -11,6 +11,28 @@ const Telegram = () => {
     const TelegramSource = pathname === "/school"
     ? "/images/telegram__yellow-button.svg"
     : "/images/telegram__button-white.svg";
+
+    const handleMouseEnter = (e) => {
+        const img = e.currentTarget.querySelector("img");
+        if (!img) return;
+    
+        if (pathname.includes("school")) {
+          img.src = "/images/telegram__button-white.svg";
+        } else {
+          img.src = "/images/telegram__yellow-button.svg";
+        } 
+      };
+      const handleMouseLeave = (e) => {
+        const img = e.currentTarget.querySelector("img");
+        if (!img) return;
+      
+        if (pathname.includes("school")) {
+          img.src = "/images/telegram__yellow-button.svg";
+        } else {
+          img.src = "/images/telegram__button-white.svg";
+        }
+      };
+      
     return (
         <div className={`telegram__block 
             ${school ? "telegram__block-margin" : "" }
@@ -32,7 +54,7 @@ const Telegram = () => {
                   🎁<span className="yellow-text">Бонусы и акции</span> — эксклюзивные предложения для<br></br>
                    подписчиков.
                 </p>
-                <Link href="#" className="telegram__button-link"><Image src={TelegramSource} alt="telegram-button" width={515} height={88} className="telegram__button-white-image"/></Link>
+                <Link href="#" className="telegram__button-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><Image src={TelegramSource} alt="telegram-button" width={515} height={88} className="telegram__button-white-image"/></Link>
             </div>
         </div>
     )

@@ -1,11 +1,13 @@
 'use client';
 
 import Image from 'next/image';
+import Link from "next/link"
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const SliderTab = () => {
     return (
+        <Link href="/states" className='slider-link'>
             <div className="slider__block">
                 <div className="slider-block-inner">
                     <Image src="/images/state__image.svg" alt="star" width={460} height={399} className="slider-block-image"></Image>
@@ -13,6 +15,7 @@ const SliderTab = () => {
                     <p className='gray-text-32 slider-block-text'>Изучение английского языка с каждым годом становится все...</p>
                 </div>
             </div>
+        </Link>
     )
 }
 
