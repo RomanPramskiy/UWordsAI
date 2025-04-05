@@ -27,9 +27,9 @@ const Header = () => {
     };
     return (
     <header className="header">
-        <div className="container">
+        <div className="container container__header">
           <div className="header__inner">
-          <Link href="#" className={`logo-header-about ${school ? "header__link-black-school-logo" : ""}`}>Uwords <span className={`logo-header-about-yellow ${school ? "header__link-black-school-logo" : ""}`}>AI</span></Link>
+          <Link href="/" className={`logo-header-about ${school ? "header__link-black-school-logo" : ""}`}>Uwords <span className={`logo-header-about-yellow ${school ? "header__link-black-school-logo" : ""}`}>AI</span></Link>
              <nav className={`header__links ${isOpen ? "hidden" : ""}`}>
                 <Link href="/" className={`
                 header__link 

@@ -67,15 +67,15 @@ const Footer = () => {
     </div>
         <div className="footer__links">
       <div className="footer__links-inner footer__links-inner1">
-        <Link href="#" className="footer__link">о нас</Link>
+        <Link href="/" className="footer__link">о нас</Link>
         <Link href="#" className="footer__link">об ИИ</Link>
         <Link href="#" className="footer__link">скачать</Link>
-        <Link href="#" className="footer__link">блог</Link>
+        <Link href="/blog" className="footer__link">блог</Link>
       </div>
       <div className="footer__links-inner">
-        <Link href="#" className="footer__link">инвесторам</Link>
-        <Link href="#" className="footer__link">школам и преподавателям</Link>
-        <Link href="#" className="footer__link">студентам и школьникам</Link>
+        <Link href="/investors" className="footer__link">инвесторам</Link>
+        <Link href="/school" className="footer__link">школам и преподавателям</Link>
+        <Link href="/students" className="footer__link">студентам и школьникам</Link>
         <Link href="#" className="footer__link">команда</Link>
       </div>
         </div>

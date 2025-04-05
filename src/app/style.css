@@ -6,6 +6,9 @@
         max-width: 1440px;
         margin: 0 auto;
     }
+    .container__header {
+        max-width: 1200px;
+    }
     .wrapper {
         min-height: 100%;
         display: flex;
@@ -198,6 +201,40 @@
         width: 100%;
         height: auto;
     }
+    .slider__block {
+        max-width: 600px;
+        border-radius: 20px;
+        padding-left: 50px;
+        max-height: 600px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+      .slider__block:hover {
+        border: 2px solid #676665;
+        background-color: #302F2E;
+    }
+      .slider-container {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .slider {
+        display: flex;
+        cursor: grab;
+        user-select: none;
+        cursor: url('/images/custom-cursor.svg') 8 8, auto;
+    }
+    .slider-link, .blog-tab-link {
+        cursor: url('/images/custom-cursor.svg') 8 8, auto;
+    }
+    
+    .slider:active {
+        cursor: grabbing;
+   }
+    .slider-block-text {
+        text-transform: none;
+    }
     .slider-block-title {
         font-family: "AvenirNextCyr-Medium", sans-serif;
         font-size: 40px;
@@ -212,9 +249,6 @@
     .slider__wrapper {
         display: flex;
         overflow: hidden;
-    }
-    .slider {
-        cursor: url('/images/custom-cursor.svg') 8 8, auto;
     }
     .slider-block-inner {
         width: 550px;
@@ -284,7 +318,7 @@
     }
     .main__learn {
         background-color: #DDFF53;
-        max-width: 1400px;
+        max-width: 1440px;
         height: 600px;
         border-radius: 30px;
         margin-top: 20px;
@@ -583,9 +617,9 @@
         gap: 50px;
     }
     .row {
-        overflow: hidden;
         display: flex;
         width: max-content;
+        transform: translateX(-33.3333%);
     }
     .main__blog {
         margin: 200px 0 300px 0;
@@ -605,9 +639,6 @@
         font-family: "AvenirNextCyr-Medium", sans-serif;
         font-size: 32px;
         color: #9c9895;
-    }
-    .slider-block-text {
-        text-transform: none;
     }
     .main__smartphone-big-image {
         position: absolute;
@@ -1212,36 +1243,6 @@
           .blocknote-opacity-top-block, .blocknote-opacity-bottom-block {
             display: none;
           }
-          .slider__block {
-            max-width: 600px;
-            border-radius: 20px;
-            padding-left: 50px;
-            max-height: 600px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-          .slider__block:hover {
-            border: 2px solid #676665;
-            background-color: #302F2E;
-        }
-          .slider-container {
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-        }
-        
-        .slider {
-            display: flex;
-            cursor: grab;
-            user-select: none;
-        }
-        .slider-link, .blog-tab-link {
-            cursor: url('/images/custom-cursor.svg') 8 8, auto;
-        }
-        
-        .slider:active {
-            cursor: grabbing;
-       }
     .students__instruction-image-1-mobile, .students__instruction-image-arrow-bottom-reverse, .main__specials-title-white2, .main__blog-link2, .blog__sort-mobile, .students__instruction-image-man-reverse, .students__opportunity-man1, .footer__woman-image-reverse, .main__innovations-remembers-text2, .questionnaire__input-block-text5 {
         display: none;
     }
@@ -1272,6 +1273,9 @@ color: #F2ECE7;
             max-width: 1024px;
             margin: 0 auto;
         }
+        .container__header {
+            max-width: 924px;
+        }
         .wrapper {
             min-height: 100%;
             display: flex;
@@ -1286,7 +1290,7 @@ color: #F2ECE7;
         }
         .logo-header-about {
             font-family: "AvenirNextCyr-Bold", sans-serif;
-            font-size: 36px;
+            font-size: 32px;
             margin-right: auto;
         }
         .logo-header-about-yellow {
@@ -1297,12 +1301,12 @@ color: #F2ECE7;
         }
         .header__links {
             display: flex;
-            gap: 35px;
+            gap: 25px;
             flex-wrap: wrap;
         }
         .header__link {
             font-family: "AvenirNextCyr-Demi", sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             transition: all 0.2s;
         }
         .header__link-yellow {
@@ -2749,11 +2753,17 @@ color: #F2ECE7;
     .container {
         max-width: 768px;
     }
+    .container__header {
+        max-width: 700px;
+    }
     .header__links {
         gap: 10px;
     }
     .header__link {
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .header__button-download {
+        font-size: 14px;
     }
     .logo-header-about {
         font-size: 26px;

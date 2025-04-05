@@ -12,8 +12,17 @@ import BlocknoteCenter from './components/BlocknoteCenter';
 import BlocknoteRight from './components/BlocknoteRight';
 import React from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [startX, setStartX] = useState(0)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setStartX(-window.innerWidth)
+    }
+  }, [])
+
   const blocks = [
     {
       backgroundColor: "#302F2E",
@@ -330,15 +339,15 @@ export default function Home() {
             <div className='main__specials-images'>
               <div className='main__specials-images-block'>
               <Image src="/images/main__specials-pink-circle.svg" alt="circle" width={400} height={358} className="main__specials-images-circle-image"></Image>
-              <Link href="#" className='main__specials-images-link' onMouseEnter={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-students-yellow.svg"} onMouseLeave={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-students.svg"}><Image src="/images/main__specials-students.svg" alt="students" width={420} height={112} className="main__specials-images-button-image"></Image> </Link>
+              <Link href="/students" className='main__specials-images-link' onMouseEnter={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-students-yellow.svg"} onMouseLeave={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-students.svg"}><Image src="/images/main__specials-students.svg" alt="students" width={420} height={112} className="main__specials-images-button-image"></Image> </Link>
               </div>
               <div className='main__specials-images-block'>
               <Image src="/images/main__specials-green-circle.svg" alt="circle" width={400} height={358} className="main__specials-images-circle-image"></Image>
-              <Link href="#" className='main__specials-images-link' onMouseEnter={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-schools-yellow.svg"} onMouseLeave={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-schools.svg"}><Image src="/images/main__specials-schools.svg" alt="schools" width={420} height={112} className="main__specials-images-button-image"></Image></Link>
+              <Link href="/school" className='main__specials-images-link' onMouseEnter={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-schools-yellow.svg"} onMouseLeave={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-schools.svg"}><Image src="/images/main__specials-schools.svg" alt="schools" width={420} height={112} className="main__specials-images-button-image"></Image></Link>
               </div>
               <div className='main__specials-images-block'>
               <Image src="/images/main__specials-yellow-circle.svg" alt="circle" width={400} height={358} className="main__specials-images-circle-image"></Image>
-              <Link href="#" className='main__specials-images-link' onMouseEnter={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-investors-yellow.svg"} onMouseLeave={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-investors.svg"}><Image src="/images/main__specials-investors.svg" alt="investors" width={420} height={120} className="main__specials-images-button-image"></Image></Link>
+              <Link href="/investors" className='main__specials-images-link' onMouseEnter={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-investors-yellow.svg"} onMouseLeave={(e) => e.currentTarget.querySelector("img").src = "/images/main__specials-investors.svg"}><Image src="/images/main__specials-investors.svg" alt="investors" width={420} height={120} className="main__specials-images-button-image"></Image></Link>
               </div>
             </div>
           </section>
@@ -365,7 +374,7 @@ export default function Home() {
             <div className='main__smartphone-block'>
             <motion.div className="row"
                 animate={{ x: ["0%", "-100%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 300, ease: "linear" }}
              >
       {[...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
@@ -379,8 +388,8 @@ export default function Home() {
             </div>
             <div className='main__smartphone-block'>
             <motion.div className="row"
-                animate={{ x: ["-100%", "0%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
+                animate={{ x: [startX, 0] }} 
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 25, ease: "linear" }}
              >
       {[...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
@@ -395,7 +404,7 @@ export default function Home() {
             <div className='main__smartphone-block'>
             <motion.div className="row"
                 animate={{ x: ["0%", "-100%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 300, ease: "linear" }}
              >
       {[...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
@@ -409,8 +418,8 @@ export default function Home() {
             </div>
             <div className='main__smartphone-block'>
             <motion.div className="row"
-                animate={{ x: ["-100%", "0%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 250, ease: "linear" }}
+                animate={{ x: [startX, 0] }} 
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 25, ease: "linear" }}
              >
       {[...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
