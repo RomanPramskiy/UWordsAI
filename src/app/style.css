@@ -398,9 +398,6 @@
         color: #2C3311;
         font-size: 14px;
     }
-    .no-display {
-        display: none;
-    }
     .blocknote-opacity-right {
         width: 50px;
         height: 20px;
@@ -772,17 +769,28 @@
         font-family: "AvenirNextCyr-Medium", sans-serif;
         font-size: 20px;
         color: #9c9895;
-        width: 620px;
+        width: 743px;
         border-radius: 100px;
         padding: 15px 30px;
         background-color: #F2ECE7;
         margin-top: 20px;
+        border: #C7C2BE solid 3px;
+    }
+    .questionnaire__form-input-value {
+        border: #9C9895 solid 3px;
+    }
+    .questionnaire__form-input-value-black {
+        border: #9C9895 solid 3px;
+    }
+    .questionnaire__form-input:focus {
+        border: #9C9895 solid 3px;
     }
     .questionnaire__form {
         display: flex;
         flex-direction: column;
         max-width: 743px;
         align-items: center;
+        z-index: 1;
     }
     .questionnaire__form-button {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -793,6 +801,19 @@
         padding: 10px 20px;
         color: #686664;
         margin-top: 20px;
+        transition: all 0.3s;
+    }
+    .questionnaire__form-button:hover {
+        background-color: #F2ECE7;
+        color: #1A1A1A;
+    }
+    .questionnaire__form-button-school {
+        background-color: #DCD7D2;
+        color: #B5B1AD;
+    }
+    .questionnaire__form-button-school:hover {
+        background-color: #1A1A1A;
+        color: #F2ECE7;
     }
     .questionnaire__input-block-text1, .questionnaire__input-block-text3 {
         max-width: 620px;
@@ -820,13 +841,18 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
-        width: 620px;
-        padding: 20px 0;
+        border: #C7C2BE 3px solid;
     }
     .questionnaire__file-content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 730px;
+        height: 150px;
+        padding: 20px 0;
+    }
+    .questionnaire__input-block-link {
+        z-index: 1;
     }
     .questionnaire__form-input-big {
         display: flex;
@@ -834,6 +860,7 @@
         border-radius: 30px;
         background-color: #302F2E;
         width: 743px;
+        border: #575553 solid 3px;
     }
     .questionnaire__input-block-image {
         margin: 50px 0;
@@ -842,6 +869,7 @@
         position: absolute;
         right: -15%;
         bottom: -20%;
+        z-index: 0;
     }
     .questionnaire-for-margin {
         margin-bottom: 500px;
@@ -926,6 +954,10 @@
     .school__input-black {
         background-color: #302F2E;
         width: 743px;
+        border: #575553 solid 3px;
+    }
+    .school__input-black:focus {
+        border: #898784 solid 3px;
     }
     .students__for-students {
         background-color: #F2ECE7;
@@ -1263,6 +1295,24 @@ color: #F2ECE7;
 }
 .slider-block-image {
     max-height: 300px;
+}
+.error-block {
+    display: none;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 5px 0px 0 20px;
+}
+.error-block.active {
+    display: flex;
+}
+.error-text {
+    font-family: "AvenirNextCyr-Medium", sans-serif;
+    font-size: 14px;
+    color: #FF4D4F;
+    text-transform: none;
+}
+.no-display {
+    display: none;
 }
     }
     @media (max-width: 1440px) {
@@ -2067,12 +2117,14 @@ color: #F2ECE7;
             padding: 15px 30px;
             background-color: #F2ECE7;
             margin-top: 20px;
+            border: #C7C2BE solid 3px;
         }
         .questionnaire__form {
             display: flex;
             flex-direction: column;
             max-width: 743px;
             align-items: center;
+            z-index: 1;
         }
         .questionnaire__form-button {
             font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -2083,6 +2135,18 @@ color: #F2ECE7;
             padding: 10px 20px;
             color: #686664;
             margin-top: 20px;
+        }
+        .questionnaire__form-button:hover {
+            background-color: #F2ECE7;
+            color: #1A1A1A;
+        }
+        .questionnaire__form-button-school {
+            background-color: #DCD7D2;
+            color: #B5B1AD;
+        }
+        .questionnaire__form-button-school:hover {
+            background-color: #1A1A1A;
+            color: #F2ECE7;
         }
         .questionnaire__input-block-text1, .questionnaire__input-block-text3 {
             max-width: 620px;
@@ -2132,6 +2196,9 @@ color: #F2ECE7;
             position: absolute;
             right: -15%;
             bottom: -20%;
+            z-index: 0;
+            max-width: 900px;
+            max-height: 1400px;
         }
         .blog__tabs {
             display: grid;
@@ -2212,6 +2279,7 @@ color: #F2ECE7;
         .school__input-black {
             background-color: #302F2E;
             width: 743px;
+            border: #575553 solid 3px;
         }
         .students__for-students {
             background-color: #F2ECE7;
@@ -2620,10 +2688,6 @@ color: #F2ECE7;
         }
         .questionnaire-for-margin {
             margin-bottom: 300px;
-        }
-        .questionnaire__image-smartphone {
-            max-width: 900px;
-            max-height: 1400px;
         }
         .questionnaire__form {
             max-width: 512px;
