@@ -238,8 +238,8 @@ export default function Home() {
                 </div>
                 </div>
             </div>
-            <Image src="/images/main__learn-smartphone.svg" alt="smartphone" width={940} height={900} className="main__learn-smartphone"></Image>
           </section>
+            
 
 
 
@@ -247,6 +247,7 @@ export default function Home() {
 
 
           <section className="main__analyzator">
+          <Image src="/images/main__learn-smartphone.svg" alt="smartphone" width={940} height={900} className="main__learn-smartphone"></Image>
           <Image src="/images/main__analyzator-flexible-words.svg" alt="words" width={1440} height={800} className="main__analyzator-flexible-words-image"></Image>
             <div className="main__analyzator-download">
               <Link className='main__analyzator-download-link' href="#">
@@ -335,7 +336,7 @@ export default function Home() {
             <h1 className='main__specials-title-pink'>Специальное</h1>
             <h1 className='white-text-128 main__specials-title-white'>предложение</h1>
             <h1 className='white-text-128 main__specials-title-white2'>наши</h1>
-            <h1 className='main__specials-title-pink main__specials-title-white3'>программы</h1>
+            <h1 className='main__specials-title-pink2'>программы</h1>
             <div className='main__specials-images'>
               <div className='main__specials-images-block'>
               <Image src="/images/main__specials-pink-circle.svg" alt="circle" width={400} height={358} className="main__specials-images-circle-image"></Image>
@@ -374,7 +375,7 @@ export default function Home() {
             <div className='main__smartphone-block'>
             <motion.div className="row"
                 animate={{ x: ["0%", "-100%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 300, ease: "linear" }}
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 450, ease: "linear" }}
              >
       {[...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks, ...blocks].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
@@ -389,9 +390,9 @@ export default function Home() {
             <div className='main__smartphone-block'>
             <motion.div className="row"
                 animate={{ x: [startX, 0] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 25, ease: "linear" }}
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 40, ease: "linear" }}
              >
-      {[...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2].map((block, index) => (
+      {[...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2, ...blocks2].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
               <Image src={block.soundImage} alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
                 <h2 className={block.titleClasses}>{block.title}</h2>
@@ -404,7 +405,7 @@ export default function Home() {
             <div className='main__smartphone-block'>
             <motion.div className="row"
                 animate={{ x: ["0%", "-100%"] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 300, ease: "linear" }}
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 450, ease: "linear" }}
              >
       {[...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3, ...blocks3].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
@@ -419,9 +420,9 @@ export default function Home() {
             <div className='main__smartphone-block'>
             <motion.div className="row"
                 animate={{ x: [startX, 0] }} 
-                transition={{ repeat: Infinity, repeatType: "loop", duration: 25, ease: "linear" }}
+                transition={{ repeat: Infinity, repeatType: "loop", duration: 40, ease: "linear" }}
              >
-      {[...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4].map((block, index) => (
+      {[...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4, ...blocks4].map((block, index) => (
               <div className={block.blockClasses} key={index} style={{ backgroundColor: block.backgroundColor }}>
               <Image src={block.soundImage} alt="sound" width={50} height={50} className="main__smartphone-sound-image"></Image>
                 <h2 className={block.titleClasses}>{block.title}</h2>

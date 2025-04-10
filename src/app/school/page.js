@@ -28,9 +28,11 @@ export default function school() {
 
 
         <section className="school__interactive">
+        <div className='colors__titles-block-left'>
           <h1 className='school__interactive-title'>Интерактивный инструмент для обучения</h1>
-          <Image src="/images/school__interactive-woman.svg" alt="free" width={460} height={399} className="school__interactive-image"/>
+        </div>
           <div className='blocknote-block-position'>
+          <Image src="/images/school__interactive-woman.svg" alt="free" width={460} height={399} className="school__interactive-image"/>
           <BlocknoteLeft 
                 bgColor="#E86BBB" 
                 text={[
@@ -59,10 +61,11 @@ export default function school() {
 
 
         <section className="school__specials">
+        <div className='colors__titles-block-right'>
           <h1 className='school__specials-title'>Специальные условия</h1>
-          <h1 className='school__specials-title2'>Специальные<br></br> условия</h1>
-          <Image src="/images/school__specials-man.svg" alt="free" width={460} height={399} className="school__specials-image"/>
+        </div>
           <div className='blocknote-block-position'>
+          <Image src="/images/school__specials-man.svg" alt="free" width={460} height={399} className="school__specials-image"/>
           <BlocknoteLeft 
                 bgColor="#DB79E2" 
                 text={[
@@ -91,9 +94,11 @@ export default function school() {
 
 
         <section className="school__exclusive">
+        <div className='colors__titles-block-left'>
         <h1 className='school__exclusive-title'>Эксклюзивные бонусы для партнеров</h1>
-          <Image src="/images/school__exclusive-woman.svg" alt="free" width={460} height={399} className="school__exclusive-image"/>
+        </div>
           <div className='blocknote-block-position'>
+          <Image src="/images/school__exclusive-woman.svg" alt="free" width={460} height={399} className="school__exclusive-image"/>
           <BlocknoteLeft 
                 bgColor="#8FA7DF" 
                 text={[

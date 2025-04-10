@@ -3,6 +3,7 @@ import "../style.css";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Slider from '../components/Slider';
+import Telegram from '../components/Telegram';
 
 export default function Home() {
   return (
@@ -70,7 +71,9 @@ export default function Home() {
         <h2 className='state__similiar-title'>Похожие статьи</h2>
         <Slider></Slider>
       </section>
-
+      <section className='blog__telegram'>
+      <Telegram></Telegram>
+      </section>
     </div>
   </main>
     <Footer></Footer>

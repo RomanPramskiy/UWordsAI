@@ -33,9 +33,11 @@ export default function investors() {
 
 
         <section className="investors__invaste-In-future-block">
+          <div className='colors__titles-block-right'>
           <h1 className='investors__market-title'>Растущий рынок EdTech</h1>
-          <Image src="/images/investors__market-woman.svg" alt="woman" width={445} height={560} className="investors__market-image"/>
+          </div>
             <div className='blocknote-block-position'>
+          <Image src="/images/investors__market-woman.svg" alt="woman" width={445} height={560} className="investors__market-image"/>
             <BlocknoteLeft 
                 bgColor="#FDEA6B" 
                 text={[
@@ -65,9 +67,11 @@ export default function investors() {
 
 
         <section className="investors__invaste-In-future-block">
+        <div className='colors__titles-block-left'>
           <h1 className='investors__uniqe-tech-title'>Уникальная технология</h1>
-          <Image src="/images/investors__tech-man.svg" alt="man" width={400} height={537} className="investors__uniqe-tech-image"/>
+        </div>
         <div className='blocknote-block-position'>
+          <Image src="/images/investors__tech-man.svg" alt="man" width={400} height={537} className="investors__uniqe-tech-image"/>
             <BlocknoteLeft 
                 bgColor="#EC7495" 
                 text={[
@@ -96,10 +100,11 @@ export default function investors() {
 
 
         <section className="investors__invaste-In-future-block">
-          <h1 className='investors__buisness-model-title'>Бизнес-модель с 
-          высоким потенциалом</h1>
-          <Image src="/images/investors__buisness-woman.svg" alt="woman" width={400} height={537} className="investors__buisness-model-image"/>
+        <div className='colors__titles-block-right'>
+          <h1 className='investors__buisness-model-title'>Бизнес-модель с высоким потенциалом</h1>
+        </div>
         <div className='blocknote-block-position'>
+          <Image src="/images/investors__buisness-woman.svg" alt="woman" width={400} height={537} className="investors__buisness-model-image"/>
             <BlocknoteLeft 
                 bgColor="#78E185" 
                 text={[
@@ -137,6 +142,8 @@ export default function investors() {
             </div>
             <div className="telegram__description-block investors__look-for-description">
                 <Image src="/images/telegram__man.svg" alt="telegram-man" width={400} height={540} className="telegram__man-image telegram__man-image1"/>
+                <div className='investors__look-for-description-inner'>
+            <Image src="/images/investors__look-for-blot.svg" alt="telegram-man" width={200} height={200} className="investors__blot"/>
                 <p className="telegram__description-block-text white-text-32 investors__look-for-text">
                 <span className="yellow-text">📊 Этап: </span>
                 MVP протестировано, есть первые пользователи и фидбек.<br></br><br></br>
@@ -146,6 +153,7 @@ export default function investors() {
 
                   <span className="yellow-text">🔹 Формат сотрудничества: </span>Seed инвестиции, партнерские вложения.
                 </p>
+                </div>
             </div>
         </div>
         </section>

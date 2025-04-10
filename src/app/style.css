@@ -390,7 +390,7 @@
     .main__learn-smartphone {
         position: absolute;
         right: 0;
-        top: 25%;
+        top: -45%;
         max-width: 390px;
     }
     .main__learn-rating-pink-text-small {
@@ -450,6 +450,7 @@
     .blocknote-block-position {
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
     .main__analyzator-flexible-words-image {
         position: absolute;
@@ -488,6 +489,9 @@
     }
     .main__analyzator-download-link {
         cursor: pointer;
+    }
+    .main__analyzator {
+        position: relative;
     }
     .main__innovations-top-blot {
         position: absolute;
@@ -847,9 +851,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 730px;
-        height: 150px;
+        height: 193px;
         padding: 20px 0;
+        overflow: hidden;
     }
     .questionnaire__input-block-link {
         z-index: 1;
@@ -872,7 +878,7 @@
         z-index: 0;
     }
     .questionnaire-for-margin {
-        margin-bottom: 500px;
+        margin-bottom: 300px;
     }
     .blog__tabs {
         display: grid;
@@ -940,9 +946,6 @@
         text-align: end;
         color: #DB79E2;
         margin: 250px 0 100px;
-    }
-    .school__specials-title2 {
-        display: none;
     }
     .school__exclusive-title {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -1052,18 +1055,21 @@
         .investors__market-image {
             position: absolute;
             z-index: 10;
-            top: 12.5%;
+            top: -95%;
         }
         .investors__uniqe-tech-image {
             position: absolute;
             z-index: 10;
-            top: 34%;
+            top: -95%;
             right: 0;
         }
         .investors__buisness-model-image {
             position: absolute;
             z-index: 10;
-            top: 57%;
+            top: -95%;
+        }
+        .investors__blot {
+            display: none;
         }
         .school__our-programs-main-title {
             font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -1150,24 +1156,24 @@
         }
         .school__interactive-image {
             position: absolute;
-            top: 14.5%;
+            top: -60%;
             right: 0;
             z-index: 10;
         }
         .school__specials-image {
             position: absolute;
-            top: 34%;
+            top: -60%;
             z-index: 10;
         }
         .school__exclusive-image {
             position: absolute;
-            top: 56.5%;
+            top: -65%;
             right: 0;
             z-index: 10;
         }
         .school__telegram {
             margin-top: 200px;
-            margin-bottom: 500px;
+            margin-bottom: 400px;
         }
         .students__for-free {
             margin-bottom: 200px;
@@ -1225,7 +1231,7 @@
             margin: 100px 0;
         }
         .blog__switch {
-            margin-bottom: 500px;
+            margin-bottom: 350px;
         }
         .blog__switch-pagination-container {
             font-family: "AvenirNextCyr-Demi", sans-serif;
@@ -1311,9 +1317,98 @@ color: #F2ECE7;
     color: #FF4D4F;
     text-transform: none;
 }
+.preview-img {
+    width: 80px;
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 12px;
+  }
+  .preview-scroll {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 40px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+  }
+  .preview-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .preview-wrapper {
+    width: 80px;
+    height: 100px;
+    border-radius: 12px;
+    background-color: #454443;
+    border: #898784 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+  .questionnaire__file-text-for-hover {
+    text-transform: none;
+    transition: all 0.2s;
+  }
+  .questionnaire__file-label {
+    cursor: pointer;
+  }
+  .questionnaire__file-label:hover .questionnaire__file-text-for-hover {
+    text-decoration: underline;
+    color: #1A1A1A;
+  }
+  .delete-btn {
+    margin-top: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+    z-index: 100;
+  }
+  
+  .delete-btn:hover {
+    transform: scale(1.1);
+  }
+  .success-title {
+    font-family: "AvenirNextCyr-Demi", sans-serif;
+    color: #5FDB64;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .success-block-top {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .success-block {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .success-block.active {
+    display: flex;
+  }
+  .success-text {
+    font-family: "AvenirNextCyr-Medium", sans-serif;
+    font-size: 20px;
+    color: #F2ECE7;
+    text-align: center;
+    max-width: 540px;
+    text-transform: none;
+  }
+  .blog__telegram {
+    display: none;
+  }
 .no-display {
     display: none;
 }
+
     }
     @media (max-width: 1440px) {
         .body__white {
@@ -1526,7 +1621,6 @@ color: #F2ECE7;
         .slider__block {
             max-width: 600px;
             border-radius: 20px;
-            padding-left: 60px;
             max-height: 600px;
             border: 2px solid transparent;
             transition: all 0.3s ease;
@@ -1693,7 +1787,7 @@ color: #F2ECE7;
         .main__learn-smartphone {
             position: absolute;
             right: 0;
-            top: 46%;
+            top: -35%;
             overflow: hidden;
             max-width: 400px;
         }
@@ -1705,9 +1799,6 @@ color: #F2ECE7;
             font-family: "AvenirNextCyr-Demi", sans-serif;
             color: #2C3311;
             font-size: 14px;
-        }
-        .no-display {
-            display: none;
         }
         .blocknote-opacity-right {
             width: 50px;
@@ -1761,9 +1852,10 @@ color: #F2ECE7;
         .blocknote-block-position {
             display: flex;
             justify-content: space-between;
+            position: relative;
         }
         .main__analyzator {
-            overflow: hidden;
+            position: relative;
         }
         .main__analyzator-flexible-words-image {
             position: absolute;
@@ -2266,9 +2358,6 @@ color: #F2ECE7;
             color: #DB79E2;
             margin: 250px 0 100px;
         }
-        .school__specials-title2 {
-            display: none;
-        }
         .school__exclusive-title {
             font-family: "AvenirNextCyr-Bold", sans-serif;
             font-size: 64px;
@@ -2374,18 +2463,21 @@ color: #F2ECE7;
             .investors__market-image {
                 position: absolute;
                 z-index: 10;
-                top: 12.5%;
+                top: -65%;
+                max-width: 200px;
             }
             .investors__uniqe-tech-image {
                 position: absolute;
                 z-index: 10;
-                top: 34%;
+                top: -64%;
                 right: 0;
+                max-width: 200px;
             }
             .investors__buisness-model-image {
                 position: absolute;
                 z-index: 10;
-                top: 57%;
+                top: -65%;
+                max-width: 200px;
             }
             .school__our-programs-main-title {
                 font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -2472,20 +2564,23 @@ color: #F2ECE7;
             }
             .school__interactive-image {
                 position: absolute;
-                top: 14.5%;
+                top: -55%;
                 right: 0;
                 z-index: 10;
+                max-width: 200px;
             }
             .school__specials-image {
                 position: absolute;
-                top: 34%;
+                top: -50%;
                 z-index: 10;
+                max-width: 200px;
             }
             .school__exclusive-image {
                 position: absolute;
-                top: 56.5%;
+                top: -55%;
                 right: 0;
                 z-index: 10;
+                max-width: 200px;
             }
             .school__telegram {
                 margin-top: 200px;
@@ -2635,7 +2730,7 @@ color: #F2ECE7;
             max-width: 1024px;
         }
         .state__similiar {
-            margin-bottom: 500px;
+            margin-bottom: 250px;
         }
         .footer__social-links {
             top: 5%;
@@ -2729,17 +2824,6 @@ color: #F2ECE7;
         .telegram__block-margin {
             margin-bottom: 400px;
         }
-        .school__interactive-image {
-            top: 14%;
-            max-width: 200px;
-        }
-        .school__specials-image {
-            max-width: 200px;
-        }
-        .school__exclusive-image {
-            top: 55.5%;
-            max-width: 200px;
-        }
         .investors__invaste-In-future-title {
             font-size: 100px;
         }
@@ -2754,23 +2838,11 @@ color: #F2ECE7;
         .investors__market-title {
             margin: 120px 0 100px 0;
         }
-        .investors__market-image {
-            max-width: 200px;
-            top: 15%;
-        }
         .investors__uniqe-tech-title {
             margin: 120px 0 100px 0;
         }
-        .investors__uniqe-tech-image {
-            max-width: 200px;
-            top: 34%;
-        }
         .investors__buisness-model-title {
             margin: 120px 0 100px 0;
-        }
-        .investors__buisness-model-image {
-            max-width: 200px;
-            top: 54%;
         }
         .main__innovations-remembers-text2 {
             display: none;
@@ -2794,7 +2866,7 @@ color: #F2ECE7;
         font-size: 60px;
     }
     .blog__switch {
-        margin-bottom: 400px;
+        margin-bottom: 250px;
     }
     .blog-tab-display-none {
         display: none;
@@ -2811,6 +2883,115 @@ color: #F2ECE7;
     }
     .blog__sort-first {
         margin-bottom: 20px;
+    }
+    .error-block {
+        display: none;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 5px 0px 0 20px;
+    }
+    .error-block.active {
+        display: flex;
+    }
+    .error-text {
+        font-family: "AvenirNextCyr-Medium", sans-serif;
+        font-size: 14px;
+        color: #FF4D4F;
+        text-transform: none;
+    }
+    .preview-img {
+        width: 80px;
+        height: 100px;
+        object-fit: cover; 
+        border-radius: 12px;
+      }
+      .preview-scroll {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 40px;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #ccc transparent;
+      }
+      .preview-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .preview-wrapper {
+        width: 80px;
+        height: 100px;
+        border-radius: 12px;
+        background-color: #454443;
+        border: #898784 solid 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+      }
+      .questionnaire__file-text-for-hover {
+        text-transform: none;
+        transition: all 0.2s;
+      }
+      .questionnaire__file-label {
+        cursor: pointer;
+      }
+      .questionnaire__file-label:hover .questionnaire__file-text-for-hover {
+        text-decoration: underline;
+        color: #1A1A1A;
+      }
+      .delete-btn {
+        margin-top: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: transform 0.2s ease;
+        z-index: 100;
+      }
+      
+      .delete-btn:hover {
+        transform: scale(1.1);
+      }
+      .success-title {
+        font-family: "AvenirNextCyr-Demi", sans-serif;
+        color: #5FDB64;
+        font-size: 24px;
+        margin-left: 10px;
+      }
+      .success-block-top {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .success-block {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+      }
+      .success-block.active {
+        display: flex;
+      }
+      .success-text {
+        font-family: "AvenirNextCyr-Medium", sans-serif;
+        font-size: 20px;
+        color: #F2ECE7;
+        text-align: center;
+        max-width: 540px;
+        text-transform: none;
+      }
+      .blog__telegram {
+        display: none;
+      }
+      .investors__blot {
+        display: none;
+      }
+      .no-display {
+        display: none;
     }
 }
 @media (max-width: 1024px) {
@@ -2864,6 +3045,7 @@ color: #F2ECE7;
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        position: relative;
     }
     .blocknote-opacity-right, .blocknote-opacity-left {
         display: none;
@@ -2912,7 +3094,7 @@ color: #F2ECE7;
     }
     .main__analyzator-flexible-words-image {
         max-width: 748px;
-        top: 150%;
+        top: 30%;
     }
     .main__analyzator-smartphone {
         max-width: 700px;
@@ -2937,7 +3119,7 @@ color: #F2ECE7;
         margin: 0 auto;
     }
     .main__learn-smartphone {
-        top: 40%;
+        top: -45%;
         right: 10%;
         max-width: 300px;
        }
@@ -3090,15 +3272,15 @@ color: #F2ECE7;
         max-height: 270px;
     }
     .school__interactive-image {
-        top: 9.5%;
+        top: -25%;
         right: 25%;
     }
     .school__specials-image {
-        top: 34%;
+        top: -25%;
         left: 27%;
     }
     .school__exclusive-image {
-        top: 59.3%;
+        top: -25%;
         right: 25%;
     }
     .school__our-programs-ref {
@@ -3124,7 +3306,7 @@ color: #F2ECE7;
     }
     .investors__market-image {
         max-width: 200px;
-        top: 9.5%;
+        top: -35%;
         left: 30%;
     }
     .investors__uniqe-tech-title {
@@ -3132,7 +3314,7 @@ color: #F2ECE7;
     }
     .investors__uniqe-tech-image {
         max-width: 200px;
-        top: 32.5%;
+        top: -30%;
         right: 20%;
     }
     .investors__buisness-model-title {
@@ -3140,7 +3322,7 @@ color: #F2ECE7;
     }
     .investors__buisness-model-image {
         max-width: 200px;
-        top: 58.3%;
+        top: -29%;
         left: 27%;
     }
     .investors__look-for-gray-text {
@@ -3151,6 +3333,7 @@ color: #F2ECE7;
     }
     .questionnaire__form {
         margin-left: 0;
+        margin-right: 0;
     }
     .telegram__description-block-text {
         max-width: 500px;
@@ -3175,17 +3358,19 @@ color: #F2ECE7;
 }
 @media (max-width: 768px) {
     .container__footer {
-        width: 321px;
-        height: 421px;
+        width: 275px;
+        height: 360px;
         background-image: url("/images/footer__background-mobile.svg");
-        background-size: auto 100%;
+        background-size: 100% auto;
         background-position: center;
         background-repeat: no-repeat;
         flex-shrink: 0;
+        padding: 0;
     }
     
     .container {
-        max-width: 320px;
+        max-width: 395px;
+        padding: 0 10px;
     }
     .header__links {
         display: none;
@@ -3221,7 +3406,7 @@ color: #F2ECE7;
         background-color: #1A1A1A;
         width: 100%;
         height: 100%;
-        max-width: 321px;
+        max-width: 376px;
         transform: translate(-50%, 0);
 
     }
@@ -3246,6 +3431,9 @@ color: #F2ECE7;
     .header__dropdown-menu.active {
         display: flex;
     }
+    .header__dropdown-menu {
+        top: 88px;
+    }
     .header__lines.active .header__line:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
@@ -3262,16 +3450,11 @@ color: #F2ECE7;
     max-width: 100px;
     max-height: 80px;
    }
-   .main__learn-smartphone {
-    max-width: 300px;
-   }
-   .main__analyzator {
-    overflow: hidden;
-   }
    .blocknote-block {
     height: 220px;
-    width: 300px;
+    max-width: 300px;
     border-radius: 20px;
+    width: 100%;
 }
 .blocknote-opacity-top {
     top: -15%;
@@ -3287,8 +3470,9 @@ color: #F2ECE7;
 }
 .footer__social-links {
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 67px;
     left: 0;
+    top: 0%;
 }
 .footer__social-links-column {
     display: flex;
@@ -3296,10 +3480,11 @@ color: #F2ECE7;
 .footer__woman-image-reverse {
     display: block;
     z-index: 1000;
-    bottom: 50%;
-    max-width: 160px;
+    bottom: 80%;
+    max-width: 150px;
     position: absolute;
     right: 0;
+    max-height: 200px;
 }
 .footer__title {
     display: none;
@@ -3325,19 +3510,20 @@ color: #F2ECE7;
     gap: 40px;
 }
 .footer__social-image {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 35px;
+    max-height: 35px;
 }
 .footer__social-link1 {
     margin-left: 10px;
 }
 .footer__social-links-column:nth-child(1) {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .footer__links-inner1 {
     margin-left: 15px;
-    justify-content: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    height: 170px;
 }
 .footer__woman-image {
     display: none;
@@ -3346,24 +3532,24 @@ color: #F2ECE7;
     display: block;
     position: absolute;
     bottom: 2%;
-    left: 50%;
-    transform: translate(-55%, 0);
+    left: 55%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: end;
 }
 .footer__links-inner {
     width: 100%;
 }
-.footer__link-mail-block {
-    width: 100%;
-    text-align: end;
-}
 .footer__download-images {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    bottom: 125%;
 }
 .main__learn-title {
-    font-size: 48px;
+    font-size: clamp(40px, 5vw, 48px);
     max-width: 320px;
     text-align: start;
+    margin-left: 10px;
 }
 .main__learn-text {
     font-size: 10px;
@@ -3371,6 +3557,7 @@ color: #F2ECE7;
 }
 .main__learn-text-block {
     justify-content: flex-start;
+    margin-left: 10px;
 }
 .main__learn-rating-block-3-icons {
     max-width: 33px;
@@ -3387,31 +3574,47 @@ color: #F2ECE7;
     font-size: 6px;
 }
 .main__learn {
-    max-width: 290px;
+    max-width: 375px;
     max-height: 410px;
-    margin: 20px auto;
-    padding: 0 0 0 5px;
+    margin: 10px auto 0 auto;
+    border-radius: 20px;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
 }
 .main__learn-image-woman {
-    max-width: 100px;
+    max-width: 120px;
     max-height: 160px;
+    bottom: -5%;
+    left: 0;
 }
 .main__learn-smartphone {
-    max-width: 100px;
-    max-height: 400px;
+    max-width: 150px;
+    max-height: 300px;
+    right: 0%;
+    top: -25%;
 }
+.main__analyzator {
+    position: relative;
+   }
 .main__analyzator-download-image {
-    max-width: 100px;
-    max-height: 20px;
+    max-width: 150px;
+    max-height: 80px;
+    margin-left: 0;
 }
 .main__analyzator-download {
     margin-top: 0px;
     flex-direction: column;
-    display: flex
+    display: flex;
+    margin-left: 0%;
+}
+.main__analyzator-download-link {
+    max-height: 50px;
 }
 .main__analyzator-smartphone {
     max-width: 300px;
     max-height: 300px;
+    z-index: 1;
 }
 .main__analyzator-bottom {
     margin-top: 0;
@@ -3425,20 +3628,22 @@ color: #F2ECE7;
     margin-bottom: 20px;
 }
 .main__analyzator-flexible-words-image {
-    max-width: 440px;
-    max-height: 120px;
-    top: 100vh;
+    max-width: 290px;
+    max-height: 150px;
+    top: 45%;
+    z-index: 0;
 }
 .footer__link {
     font-size: 12px;
     color: #F2ECE7;
 }
 .footer__link-mail {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 .telegram__text-block-text {
     font-size: 12px;
+    text-transform: uppercase;
 }
 .main__specials-title-pink {
     display: none;
@@ -3449,8 +3654,9 @@ color: #F2ECE7;
 .main__specials-title-white2 {
     font-size: 40px;
     text-align: start;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-top: 50px;
+    display: block;
 }
 .main__innovations-remembers-text {
     font-size: 20px;
@@ -3461,6 +3667,7 @@ color: #F2ECE7;
 .main__innovations-introduction-text {
     font-size: 12px;
     margin-bottom: 20px;
+    margin-top: 100px;
 }
 .telegram__description-block-text {
     font-size: 16px;
@@ -3482,6 +3689,8 @@ color: #F2ECE7;
 }
 .telegram__man-image1 {
     right: 0;
+    top: -7%;
+    max-width: 105px;
 }
 .telegram__title-blue, .telegram__title-white  {
     font-size: 48px;
@@ -3496,18 +3705,37 @@ color: #F2ECE7;
 .slider-block-title {
     font-size: 20px;
     max-width: inherit;
+            margin: 20px 0;
 }
 .slider-block-inner {
-    max-width: 220px;
-    margin-right: 50px;
+    max-width: 250px;
+    max-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
 }
 .slider-block-image {
-    max-width: 220px;
+    max-width: 180px;
     max-height: 100px;
+    border-radius: 20px;
 }
 .slider-container {
     margin-top: 50px;
-    max-height: 250px;
+    height: 290px;
+}
+.slider-link {
+    max-height: 260px;
+}
+.slider__block {
+    max-height: 280px;
+    max-width: 300px;
+    margin-left: auto;
+}
+.slider__block:hover {
+    border: 2px solid #676665;
+    background-color: transparent;
 }
 .main__blog-link {
     display: none;
@@ -3516,9 +3744,14 @@ color: #F2ECE7;
     display: flex;
     justify-content: flex-end;
     font-size: 20px;
+    transition: all 0.2s;
+    margin-top: 20px;
+}
+.main__blog-link2:hover {
+    color: #DDFF53;
 }
 .main__blog {
-    margin-bottom: 500px;
+    margin-bottom: 400px;
     margin-top: 50px;
 }
 .main__blog-text {
@@ -3526,6 +3759,7 @@ color: #F2ECE7;
 }
 .main__innovations-offer {
     flex-direction: column;
+    margin-bottom: 120px;
 }
 .main__innovations-offer-yellow-block {
     display: none;
@@ -3553,6 +3787,8 @@ margin-top: 30px;
 .main__innovations-remembers-pink-block {
     background-color: #FDEA6B;
     margin: 20px 0;
+    max-width: 300px;
+    width: 100%;
 }
 .main__innovations-blot-bottom {
     max-width: 200px;
@@ -3563,7 +3799,11 @@ margin-top: 30px;
     max-height: 150px;
 }
 .main__innovations {
-    max-width: 320px;
+    max-width: 375px;
+    border-radius: 20px;
+    padding: 0;
+    padding: 0 10px;
+    background-size: 81px 81px;
 }
 
 .footer__title-mobile {
@@ -3592,8 +3832,8 @@ margin-top: 30px;
     font-size: 10px;
 }
 .main__smartphone-big-image {
-    max-height: 300px;
-    max-width: 320px;
+    max-height: 350px;
+    max-width: 200px;
 }
 .main__innovations-introduction-title, .main__learn-title {
     white-space: normal;
@@ -3604,6 +3844,7 @@ margin-top: 30px;
 .main__learn-rating-block {
     justify-content: space-between;
     width: 100%;
+    margin-left: 10px;
 }
 .main__learn-rating-block-stars {
     width: 100px;
@@ -3611,13 +3852,30 @@ margin-top: 30px;
 .main__innovations-introduction-title {
     margin-top: 30px;
 }
+.main__innovations-introduction {
+    margin-top: 60px;
+}
 .main__innovations-education {
     max-width: 280px;
     max-height: 100px;
-    top: 6%;
+    top: 7%;
 }
-.main__specials-images-circle-image {
-    max-height: 250px;
+.main__specials-images-circle-image, .main__specials-images-button-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.main__specials-images-block {
+    max-width: 375px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.main__specials-images-button-image {
+    max-height: 70px;
+}
+.main__specials {
+    margin-top: 30px;
 }
 .main__specials-title-pink2 {
     font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -3625,21 +3883,28 @@ margin-top: 30px;
     text-align: start;
     color: #DB79E2;
     margin-bottom: 20px;
+    display: block;
 }
 .investors__telegram {
     margin-bottom: 500px;
 }
 .questionnaire {
-    max-width: 300px;
+    max-width: 375px;
     min-height: 450px;
 }
 .investors__contact-with-us-title {
     text-align: start;
     margin: 20px 0;
 }
+.investors__contact-with-us {
+    margin-bottom: 100px;
+}
 .gray-text-24 {
     font-size: 12px;
     white-space: normal;
+}
+.telegram__description-block {
+    border-radius: 20px;
 }
 .questionnaire__input-block-text1, .questionnaire__input-block-text3 {
     display: none;
@@ -3653,14 +3918,21 @@ margin-top: 30px;
     margin: 0;
 }
 .questionnaire__form-input {
-    max-width: 300px;
+    max-width: 375px;
     padding: 10px 5px;
+    width: 100%;
+}
+.questionnaire__form-input-big {
+    padding-bottom: 100px;
 }
 .questionnaire__form-input::placeholder {
     text-indent: 10px;
   }
   .investors__future {
-    margin-top: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    max-width: 375px;
+    background-size: 81px 81px;
   }
 .investors__invaste-In-future-title {
     font-size: 24px;
@@ -3675,33 +3947,37 @@ margin-top: 30px;
     margin: 50px 0 10px;
     font-size: 20px;
     text-align: end;
+    max-width: 200px;
 }
 .investors__market-image {
     max-width: 120px;
-    top: 4%;
+    top: -45%;
     left: 0;
 }
 .investors__uniqe-tech-title {
     font-size: 20px;
     margin: 50px 0 10px;
+    max-width: 100px;
 }
 .investors__uniqe-tech-image {
     max-width: 120px;
-    top: 27%;
+    top: -45%;
     right: 0;
 }
 .investors__buisness-model-title {
     font-size: 20px;
     margin: 50px 0 10px;
+    max-width: 230px;
 }
 .investors__buisness-model-image {
     max-width: 120px;
-    top: 51%;
-    left: 0;
+    top: -45%;
+    left: -10%;
 }
 .investors__look-for-title {
     font-size: 32px;
     margin: 40px 0;
+    white-space: nowrap;
 }
 .school__for-teachers-title {
     font-size: 24px;
@@ -3722,17 +3998,12 @@ margin-top: 30px;
     max-width: 165px;
 }
 .school__specials-title {
-    display: none;
-}
-.school__specials-title2 {
     font-size: 20px;
-    text-align: end;
-    margin: 40px 0;
-    max-width: 300px;
-    font-family: "AvenirNextCyr-Bold", sans-serif;
-    color: #DB79E2;
     display: block;
+    margin: 40px 0 40px;
+    max-width: 180px;
 }
+
 .school__exclusive-title {
     font-size: 20px;
     text-align: start;
@@ -3760,8 +4031,12 @@ margin-top: 30px;
     max-width: 240px;
 }
 .school__our-programs-partnerka, .school__our-programs-ref {
-    max-width: 280px;
+    max-width: 300px;
     max-height: 190px;
+    width: 100%;
+}
+.school__our-programs-ref {
+    margin-top: 20px;
 }
 .school__telegram {
     margin-bottom: 500px;
@@ -3787,20 +4062,20 @@ margin-top: 30px;
 .school__interactive-image {
     max-width: 150px;
     max-height: 220px;
-    top: 5%;
-    right: 0;
+    top: -20%;
+    right: -13%;
 }
 .school__specials-image {
     max-width: 150px;
     max-height: 220px;
-    top: 29.5%;
-    left: 0;
+    top: -20%;
+    left: -13%;
 }
 .school__exclusive-image {
     max-width: 150px;
     max-height: 220px;
-    top: 55%;
-    right: 0;
+    top: -25%;
+    right: -13%;
 }
 .students__for-free-title {
     font-size: 32px;
@@ -3839,10 +4114,10 @@ max-width: 280px;
 }
 .students__questionnaire {
     margin-bottom: 500px;
-    max-width: 300px;
+    max-width: 375px;
 }
 .questionnaire__upload-block {
-    max-width: 300px;
+    max-width: 290px;
 }
 .students__questionnaire-title {
     text-align: start;
@@ -3855,6 +4130,9 @@ max-width: 280px;
 .students__for-students {
     position: relative;
     max-height: 1870px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-size: 81px 81px;
 }
 .students__for-free {
     margin-bottom: 80px;
@@ -3935,7 +4213,7 @@ max-width: 280px;
     font-size: 48px;
 }
 .blog__switch {
-    margin-bottom: 500px;
+    margin-bottom: 0px;
 }
 .blog-tab-block {
     max-width: 160px;
@@ -4001,7 +4279,8 @@ max-width: 280px;
     font-size: 14px;
 }
 .state__content-image {
-    max-width: 320px;
+    max-width: 375px;
+    width: 100%;
     max-height: 200px;
 }
 .state__content-title-after-image {
@@ -4028,7 +4307,7 @@ max-width: 280px;
     margin-top: 50px;
 }
 .state__similiar {
-    margin-bottom: 500px;
+    margin-bottom: 0px;
 }
 .state__similiar-title {
     font-size: 20px;
@@ -4038,5 +4317,58 @@ max-width: 280px;
 }
 .main__smartphone-block-inner {
     margin-right: 30px;
+}
+.footer__links {
+    bottom: 7%;
+}
+.school__lecturer-and-schools {
+    margin-top: 10px;
+    border-radius: 20px;
+    background-size: 81px 81px;
+}
+.investors__invaste-In-future-text {
+margin-top: 70px;
+max-width: 250px;
+}
+.colors__titles-block-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.colors__titles-block-left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.investors__blot {
+    display: block;
+    position: absolute;
+    max-width: 100px;
+    max-height: 100px;
+    top: -6%;
+    left: 0;
+    z-index: 0;
+}
+.investors__look-for-description-inner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 50px 10px 20px;
+    z-index: 1;
+}
+.investors__look-for-description {
+    padding: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.investors__look-for-text {
+    max-width: 200px;
+}
+.blog__telegram {
+    display: block;
+    margin: 50px 0 420px;
+}
+.telegram__title-blue, .telegram__title-white, .telegram__description-block-text, .yellow-text-telegram  {
+    text-transform: uppercase;
 }
 }

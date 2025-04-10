@@ -45,13 +45,13 @@ const Telegram = () => {
             <div className="telegram__description-block">
                 <Image src="/images/telegram__man.svg" alt="telegram-man" width={400} height={540} className="telegram__man-image"/>
                 <p className="telegram__description-block-text white-text-32">
-                🎓 <span className="yellow-text">Актуальные учебные материалы и подборки</span> —<br></br>
+                🎓 <span className="yellow-text yellow-text-telegram">Актуальные учебные материалы и подборки</span> —<br></br>
                  только полезные слова и выражения.<br></br><br></br>
 
-                 🤝 <span className="yellow-text">Сообщество</span> — общайтесь с<br></br>
+                 🤝 <span className="yellow-text yellow-text-telegram">Сообщество</span> — общайтесь с<br></br>
                   единомышленниками и обменивайтесь опытом.<br></br><br></br>
 
-                  🎁<span className="yellow-text">Бонусы и акции</span> — эксклюзивные предложения для<br></br>
+                  🎁<span className="yellow-text yellow-text-telegram">Бонусы и акции</span> — эксклюзивные предложения для<br></br>
                    подписчиков.
                 </p>
                 <Link href="#" className="telegram__button-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}><Image src={TelegramSource} alt="telegram-button" width={515} height={88} className="telegram__button-white-image"/></Link>

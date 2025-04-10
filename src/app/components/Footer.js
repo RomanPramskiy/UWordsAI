@@ -31,7 +31,6 @@ const Footer = () => {
     return (    
 <footer className={`footer ${school ? "footer-white" : ""}`}>
 <div className="container container__footer">
-    <div className="footer__inner">
     <div className="footer__download-images">
         <Link href="#" className="footer__social-download-link"><Image src="/images/footer__google-play-school.svg" alt="google play" width={400} height={120} className="footer__social-download-image"/></Link>
         <Link href="#" className="footer__social-download-link"><Image src="/images/footer__app-store-school.svg" alt="app store" width={400} height={120} className="footer__social-download-image"/></Link>
@@ -83,7 +82,6 @@ const Footer = () => {
         <Link href="#" className="footer__link-mail">uwords.app@mojo.com</Link>
       </div>
     </div>
-</div>
 </footer>
     )
 }

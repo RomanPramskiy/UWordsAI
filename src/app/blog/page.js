@@ -5,6 +5,7 @@ import "../style.css";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BlogTab from '../components/BlogTab';
+import Telegram from '../components/Telegram';
 import { useState } from "react";
 
 export default function blog() {
@@ -156,6 +157,9 @@ export default function blog() {
       </button>
         </div>
     </div>
+      </section>
+      <section className='blog__telegram'>
+      <Telegram></Telegram>
       </section>
     </div>
   </main>
