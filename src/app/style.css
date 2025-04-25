@@ -6,8 +6,8 @@
         max-width: 1440px;
         margin: 0 auto;
     }
-    .container__header {
-        max-width: 1200px;
+    .container__header, .container__states {
+        max-width: 1360px;
     }
     .wrapper {
         min-height: 100%;
@@ -90,9 +90,6 @@
     .header__dropdown-menu {
         display: none;
     }
-        .footer-white {
-            background-color: #F2ECE7;
-        }
         .footer__woman-image {
             position: absolute;
             bottom: 0;
@@ -103,7 +100,7 @@
           }
         .container__footer {
             max-width: 1440px;
-            height: 650px; 
+            height: 663px; 
             background-image: url("/images/footer__background.svg");
             background-size: auto 100%;
             background-position: center;
@@ -111,16 +108,11 @@
             flex-shrink: 0;
             position: relative;
         }
-    .footer__link-mail-block {
-        width: 100%;
-        text-align: end;
-        z-index: 10;
-    }
     .footer__social-links {
         position: absolute;
         display: flex;
         max-width: 400px;
-        right: 15%;
+        right: 12%;
         top: 5%;
     }
     .footer__social-link {
@@ -140,9 +132,9 @@
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        bottom: 15%;
+        bottom: 23%;
         right: 5%;
-        gap: 40px;
+        gap: 150px;
     }
     .footer__link {
         font-family: "AvenirNextCyr-Demi", sans-serif;
@@ -154,7 +146,7 @@
     }
     .footer__link-mail {
         font-family: "AvenirNextCyr-Bold", sans-serif;
-        font-size: 50px;
+        font-size: 64px;
         color: #DDFF53;
             display: block;
             position: absolute;
@@ -181,12 +173,9 @@
         display: flex;
         position: absolute;
         bottom: 120%;
-        width: 90%;
-        max-width: 100%;
-        justify-content: center;
-        align-items: center;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
     }
     .footer__download-image {
         flex-grow: 1;
@@ -202,16 +191,22 @@
         height: auto;
     }
     .slider__block {
-        max-width: 600px;
+        width: 584px;
         border-radius: 20px;
-        padding-left: 50px;
-        max-height: 600px;
         border: 2px solid transparent;
         transition: all 0.3s ease;
+        padding: 20px;
     }
       .slider__block:hover {
         border: 2px solid #676665;
         background-color: #302F2E;
+    }
+    .slider__block-inner {
+        max-width: 540px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
       .slider-container {
         overflow: hidden;
@@ -221,12 +216,17 @@
     
     .slider {
         display: flex;
-        cursor: grab;
         user-select: none;
         cursor: url('/images/custom-cursor.svg') 8 8, auto;
+        gap: 40px;
+        min-width: max-content;
+        align-items: stretch;
     }
     .slider-link, .blog-tab-link {
         cursor: url('/images/custom-cursor.svg') 8 8, auto;
+    }
+    .slider-link:active, .blog-tab-link:active {
+        cursor: grabbing;
     }
     
     .slider:active {
@@ -240,6 +240,7 @@
         font-size: 40px;
         color: #F2ECE7;
         text-transform: none;
+        margin: 20px 0 15px;
     }
     .slider-block-text {
         font-family: "AvenirNextCyr-Medium", sans-serif;
@@ -249,10 +250,6 @@
     .slider__wrapper {
         display: flex;
         overflow: hidden;
-    }
-    .slider-block-inner {
-        width: 550px;
-        height: 500px;
     }
     .yellow-text {
         color: #DDFF53;
@@ -272,7 +269,6 @@
         font-size: 128px;
         color: #8FA7DF;
         text-transform: uppercase;
-        text-align: center;
         margin-bottom: 60px;
     }
     .telegram__title-white {
@@ -292,19 +288,26 @@
         border-radius: 30px;
         padding: 50px 30px;
         position: relative;
+        width: 100%;
     }
     .telegram__man-image {
         position: absolute;
-        right: 0;
+        right: -3%;
         top: -70%;
+        max-width: 350px;
     }
     .telegram__button-white-image {
         position: absolute;
-        right: 5%;
-        top: 88%;
+        right: 3%;
+        top: 89.5%;
     }
     .telegram__text-block-text {
         margin-bottom: 100px;
+        max-width: 550px;
+    }
+    .telegram__text-block {
+        max-width: 1360px;
+        width: 100%;
     }
     .telegram-school-title {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -318,16 +321,20 @@
     }
     .main__learn {
         background-color: #DDFF53;
-        max-width: 1440px;
+        max-width: 1400px;
         height: 600px;
-        border-radius: 30px;
-        margin-top: 20px;
+        border-radius: 60px;
         padding-top: 10px;
         position: relative;
+        overflow: hidden;
+        margin: 20px auto 0;
     }
     .main__learn-title {
         text-align: center;
         margin-right: 100px;
+    }
+    .main__learn-title2 {
+        margin-right: 300px;
     }
     .black-text-128 {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -341,13 +348,23 @@
     }
     .main__learn-image-woman {
         position: absolute;
-        bottom: 0;
-        left: 1.5%;
+        bottom: -5%;
+        left: -0.5%;
     }
     .main__learn-rating-block {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .main__learn-block-under {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__learn-block-under-inner {
+        display: flex;
+        flex-direction: column;
+        margin-right: 200px;
     }
     .main__learn-text {
         font-family: "AvenirNextCyr-Demi", sans-serif;
@@ -356,11 +373,10 @@
         text-align: left;
         text-transform: uppercase;
         line-height: 150%;
+        max-width: 500px;
     }
     .main__learn-text-block {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
     .main__learn-rating-block-first {
         display: flex;
@@ -389,14 +405,15 @@
     }
     .main__learn-smartphone {
         position: absolute;
-        right: 0;
-        top: -45%;
+        right: 4%;
+        top: -550%;
         max-width: 390px;
     }
     .main__learn-rating-pink-text-small {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         color: #2C3311;
         font-size: 14px;
+        max-width: 120px;
     }
     .blocknote-opacity-right {
         width: 50px;
@@ -455,18 +472,22 @@
     .main__analyzator-flexible-words-image {
         position: absolute;
         z-index: -1;
+        top: -25%;
     }
     .main__analyzator-download-image {
         margin-left: 20px;
     }
     .main__analyzator-download {
         margin-top: 50px;
+        position: relative;
+        margin-left: 40px;
     }
     .main__analyzator-bottom-title {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 60px;
         color: #F2ECE7;
         margin-bottom: 100px;
+        max-width: 900px;
     }
     .main__analyzator-aquamarine {
         color: #9FD8E5;
@@ -481,11 +502,13 @@
     }
     .main__analyzator-bottom-text {
         font-size: 28px;
+        max-width: 550px;
     }
     .main__analyzator-bottom-text-block {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        margin-right: 40px;
     }
     .main__analyzator-download-link {
         cursor: pointer;
@@ -495,12 +518,12 @@
     }
     .main__innovations-top-blot {
         position: absolute;
-        right: 3%;
+        right: 0%;
         top: -3%;
     }
     .main__innovations-education {
         position: absolute;
-        top: 7%;
+        top: 10%;
         left: 35%;
     }
     .main__innovations, .investors__future, .school__lecturer-and-schools, .students__for-students {
@@ -510,14 +533,19 @@
         background-image: 
           linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
           linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-        background-size: 220px 220px;
+        background-size: 240px 240px;
         border-radius: 60px;
         padding: 20px 20px;
         overflow: hidden;
         margin-top: 50px;
     }
+    .investors__future, .school__lecturer-and-schools, .students__for-students {
+        max-width: 1400px;
+        margin: 50px auto 0 auto;
+    }
     .main__innovations-introduction-text {
         margin: 50px 0 100px;
+        max-width: 400px;
     }
     .main__innovations-block-image {
         width: 440px;
@@ -548,7 +576,7 @@
         justify-content: space-between;
     }
     .main__innovations-offer {
-        margin-bottom: 20px;
+        margin-bottom: 100px;
     }
     .main__innovations-blot-bottom {
         position: absolute;
@@ -581,6 +609,7 @@
     }
     .main__smartphone {
         margin-top: 100px;
+        position: relative;
     }
     .main__smartphone-block-title, .main__smartphone-block-title-white {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -612,18 +641,41 @@
         overflow: hidden;
         position: relative;
         margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 400px;
     }
     .main__smartphone {
         overflow: hidden;
         gap: 50px;
+        width: 100%;
+        overflow: hidden
     }
-    .row {
+    .main__smartphone-row {
         display: flex;
-        width: max-content;
-        transform: translateX(-33.3333%);
+        width: 100%;
+    }
+    .main__smartphone-block div[class*="block"] {
+        flex: 0 0 auto;
+        width: 360px;
+      }
+      .main__smartphone-big-image {
+        position: absolute;
+        z-index: 1000;
+        top: 4.5%;
+    }
+    .main__smartphone-association-image {
+        position: absolute;
+        bottom: -3%;
+        right: -3%;
+        z-index: 10;
+    }
+    .main__smartphone-block-inner-white {
+        border: 3px solid #fff;
     }
     .main__blog {
-        margin: 200px 0 300px 0;
+        margin: 100px auto 400px auto;
+        max-width: 1400px;
     }
     .main__blog-title {
         -webkit-text-stroke: 3px #fff;
@@ -634,25 +686,12 @@
         justify-content: flex-end;
     }
     .main__blog-link-block1 {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .gray-text-32 {
         font-family: "AvenirNextCyr-Medium", sans-serif;
         font-size: 32px;
         color: #9c9895;
-    }
-    .main__smartphone-big-image {
-        position: absolute;
-        z-index: 1000;
-    }
-    .main__smartphone-association-image {
-        position: absolute;
-        bottom: -3%;
-        right: -3%;
-        z-index: 10;
-    }
-    .main__smartphone-block-inner-white {
-        border: 3px solid #fff;
     }
     .main__state * {
         text-transform: none;
@@ -746,19 +785,18 @@
         margin-top: 30px;
       }
       .state__similiar {
-        margin-bottom: 300px;
+        margin-bottom: 550px;
       }
       .state__similiar-title {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 64px;
         color: #F2ECE7;
-        margin-top: 50px;
+        margin: 50px 0 20px;
       }
       .questionnaire {
         overflow: hidden;
         position: relative;
-        min-height: 900px;
-        margin-bottom: 100px;
+        height: 920px;
       }
       .questionnaire__wrapper {
         display: flex;
@@ -767,13 +805,19 @@
       .questionnaire__input-block {
         display: flex;
         flex-direction: column;
+        margin-left: 30px;
+      }
+      .questionnaire__input-block-students {
+        max-width: 620px;
+        width: 100%;
       }
       .questionnaire__form-input {
         text-transform: none;
         font-family: "AvenirNextCyr-Medium", sans-serif;
         font-size: 20px;
         color: #9c9895;
-        width: 743px;
+        max-width: 743px;
+        width: 100%;
         border-radius: 100px;
         padding: 15px 30px;
         background-color: #F2ECE7;
@@ -846,14 +890,16 @@
         justify-content: center;
         margin-top: 20px;
         border: #C7C2BE 3px solid;
+        max-width: 743px;
+        width: 100%;
     }
     .questionnaire__file-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 730px;
-        height: 193px;
+        max-width: 730px;
+        width: 100%;
         padding: 20px 0;
         overflow: hidden;
     }
@@ -873,18 +919,22 @@
     }
     .questionnaire__image-smartphone {
         position: absolute;
-        right: -15%;
-        bottom: -20%;
+        right: -20%;
+        bottom: -15%;
         z-index: 0;
     }
-    .questionnaire-for-margin {
-        margin-bottom: 300px;
-    }
     .blog__tabs {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, auto);
+        display: flex;
+        flex-direction: column;
     }
+    .blog__tabs-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .blog-tab-link {
+        max-width: 445px;
+      }
     .blog-tab-title {
         font-family: "AvenirNextCyr-Medium", sans-serif;
         font-size: 32px;
@@ -893,14 +943,16 @@
         line-height: 48px;
     }
     .blog-tab-block-inner {
-        max-width: 445px;
-        max-height: 456px;
-        border-radius: 20px;
         padding: 20px;
         border: 2px solid transparent;
         transition: all 0.3s ease;
     }
-    .blog-tab-block-inner:hover {
+    .blog-tab-block {
+        border-radius: 20px;
+        border: 2px solid transparent;
+        height: 100%;
+    }
+    .blog-tab-block:hover {
         border: 2px solid #676665;
         background-color: #302F2E;
     }
@@ -910,13 +962,23 @@
     .blog__sort-text {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 32px;
-        margin-bottom: 15px;
+        margin-bottom: 14px;
+        margin-left: 8px;
+    }
+    .blog__sort-button {
+        background: none;
+        display: flex;
+        align-items: flex-end;
     }
     .blog__sort-title {
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 80px;
         color: #686664;
         text-transform: none;
+        transition: all 0.2s;
+    }
+    .blog__sort-title:hover {
+        color: #DDFF53;
     }
     .blog__sort-block {
         display: flex;
@@ -937,7 +999,7 @@
         font-size: 64px;
         text-align: start;
         color: #8FA7DF;
-        margin: 100px 0;
+        margin: 30px 0 100px;
         max-width: 1000px;
     }
     .school__specials-title {
@@ -953,6 +1015,7 @@
         text-align: start;
         color: #FDEA6B;
         margin: 250px 0 100px;
+        max-width: 900px;
     }
     .school__input-black {
         background-color: #302F2E;
@@ -973,6 +1036,7 @@
         font-family: "AvenirNextCyr-Demi", sans-serif;
         font-size: 24px;
         max-width: 410px;
+        margin-top: 20px;
     }
       .students__opportunity {
           background-color: #1A1A1A;
@@ -982,7 +1046,6 @@
           display: flex;
           max-width: 1360px;
           margin: 0 auto;
-          height: 590px;
           padding-top: 40px;
         }
         .students__opportunity-blot {
@@ -996,22 +1059,17 @@
             color: #F2ECE7;
             margin: 80px 0;
         }
-        .main__school {
-            background-color: #F2ECE7;
-        }
         .investors__contact-with-us-title {
             text-align: center;
             margin-top: 100px;
             margin-bottom: 60px;
         }
-        .investors__contact-with-us {
-            margin-bottom: 100px;
-        }
-        .investors__look-for-text {
-          max-width: 970px;
+        .investors__look-for {
+            position: relative;
         }
         .investors__look-for-gray-text {
           max-width: 870px;
+          margin-bottom: 50px;
         }
         .investors__look-for-title {
           font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -1025,32 +1083,34 @@
         }
         .investors__invaste-In-future-text {
           max-width: 465px;
+          margin-top: 50px;
         }
         .investors__market-title {
           font-family: "AvenirNextCyr-Bold", sans-serif;
           font-size: 64px;
           text-align: end;
           color: #FDEA6B;
-          margin: 300px 0 80px;
+          margin: 220px 0 80px;
         }
         .investors__uniqe-tech-title {
           font-family: "AvenirNextCyr-Bold", sans-serif;
           font-size: 64px;
           text-align: start;
           color: #9DDADB;
-          margin: 300px 0 80px;
+          margin: 220px 0 80px;
         }
         .investors__buisness-model-title {
           font-family: "AvenirNextCyr-Bold", sans-serif;
           font-size: 64px;
           text-align: end;
           color: #78E185;
-          margin: 300px 0 80px;
+          margin: 220px 0 80px;
+          max-width: 1000px;
         }
         .investors__invaste-In-future-image {
             position: absolute;
             right: 7%;
-            top: 5%;
+            top: 5.3%;
         }
         .investors__market-image {
             position: absolute;
@@ -1143,8 +1203,8 @@
         }
         .school__for-free-image {
             position: absolute;
-            top: 1%;
-            right: 15%;
+            top: 0.8%;
+            right: 7%;
         }
         .school__for-teachers-title {
             font-size: 112px;
@@ -1156,31 +1216,30 @@
         }
         .school__interactive-image {
             position: absolute;
-            top: -60%;
-            right: 0;
+            top: -90%;
+            right: -3%;
             z-index: 10;
         }
         .school__specials-image {
             position: absolute;
-            top: -60%;
+            top: -90%;
             z-index: 10;
         }
         .school__exclusive-image {
             position: absolute;
-            top: -65%;
-            right: 0;
+            top: -94%;
+            right: -3%;
             z-index: 10;
         }
         .school__telegram {
-            margin-top: 200px;
-            margin-bottom: 400px;
+            margin: 100px 0 400px;
         }
         .students__for-free {
             margin-bottom: 200px;
         }
         .students__for-free-image {
             position: absolute;
-            top: 4.5%;
+            top: 4%;
             right: 6%;
         }
         .students__for-students {
@@ -1203,7 +1262,7 @@
         }
         .students__instruction-image-2 {
             position: absolute;
-            left: 0;
+            left: 5%;
             top: 69%;
         }
         .students__instruction-image-3 {
@@ -1225,6 +1284,9 @@
             position: absolute;
             left: 25%;
             top: 88%;
+        }
+        .students__questionnaire {
+            margin-bottom: 280px;
         }
         .students__questionnaire-title {
             text-align: center;
@@ -1281,11 +1343,8 @@
           .blocknote-opacity-top-block, .blocknote-opacity-bottom-block {
             display: none;
           }
-    .students__instruction-image-1-mobile, .students__instruction-image-arrow-bottom-reverse, .main__specials-title-white2, .main__blog-link2, .blog__sort-mobile, .students__instruction-image-man-reverse, .students__opportunity-man1, .footer__woman-image-reverse, .main__innovations-remembers-text2, .questionnaire__input-block-text5 {
-        display: none;
-    }
     .investors__telegram {
-        margin-bottom: 500px;
+        margin-bottom: 400px;
     }
     .main__specials-title-white3 {
         display: none;
@@ -1298,9 +1357,6 @@
 }
 .footer__link-mail:hover {
 color: #F2ECE7;
-}
-.slider-block-image {
-    max-height: 300px;
 }
 .error-block {
     display: none;
@@ -1327,8 +1383,7 @@ color: #F2ECE7;
     display: flex;
     gap: 20px;
     justify-content: flex-start;
-    width: 100%;
-    margin-left: 40px;
+    width: 90%;
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: #ccc transparent;
@@ -1355,6 +1410,8 @@ color: #F2ECE7;
   }
   .questionnaire__file-label {
     cursor: pointer;
+    max-width: 743px;
+    width: 100%;
   }
   .questionnaire__file-label:hover .questionnaire__file-text-for-hover {
     text-decoration: underline;
@@ -1402,13 +1459,61 @@ color: #F2ECE7;
     max-width: 540px;
     text-transform: none;
   }
-  .blog__telegram {
-    display: none;
+  .main__innovations-introduction {
+    margin-top: 100px;
+}
+.main__innovations-remembers-text, .main__innovations-offer-text {
+    max-width: 800px;
+}
+.main__blog-text {
+    max-width: 450px;
+}
+.telegram__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.colors__titles-block-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.colors__titles-block-left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.questionnaire__input-block-text5 {
+    max-width: 590px;
+    margin-bottom: 70px;
+}
+.telegram__description-block-text {
+    max-width: 950px;
+}
+.telegram__man-image1 {
+    top: 20%;
+    z-index: 1000;
+    right: 0%;
+    max-width: 500px;
+}
+.investors__look-for-text {
+    max-width: 1100px;
   }
-.no-display {
+  .investors__look-for-text-indent-1, .investors__look-for-text-indent-2 {
+    display: inline-block;
+    max-width: 900px;
+    white-space: normal;
+    text-align: left;
+  }
+  .investors__look-for-text-indent-3 {
+    display: inline-block;
+  }
+  .questionnaire__image-smartphone-students {
+    top: -15%;
+  }
+.no-display, .students__instruction-image-1-mobile, .students__instruction-image-arrow-bottom-reverse, .main__specials-title-white2, .main__blog-link2, .blog__sort-mobile, .students__instruction-image-man-reverse, .students__opportunity-man1, .footer__woman-image-reverse, .main__innovations-remembers-text2, .students__telegram, .blog__telegram, .blog__tabs-adaptive, .blocknote-block-position-mobile, .investors__invaste-In-future-image-mobile, .br-display, .students__instruction-image-3-mobile {
     display: none;
 }
-
     }
     @media (max-width: 1440px) {
         .body__white {
@@ -1417,9 +1522,7 @@ color: #F2ECE7;
         .container {
             max-width: 1024px;
             margin: 0 auto;
-        }
-        .container__header {
-            max-width: 924px;
+            padding: 0 10px;
         }
         .wrapper {
             min-height: 100%;
@@ -1502,9 +1605,6 @@ color: #F2ECE7;
         .header__dropdown-menu {
             display: none;
         }
-        .footer-white {
-            background-color: #F2ECE7;
-        }
         .footer__woman-image {
             position: absolute;
             bottom: 0;
@@ -1515,7 +1615,7 @@ color: #F2ECE7;
         }
         .container__footer {
             max-width: 1024px;
-            height: 400px; 
+            height: 470px; 
             background-image: url("/images/footer__background.svg");
             background-size: auto 100%;
             background-position: center;
@@ -1527,13 +1627,6 @@ color: #F2ECE7;
       .footer__title-mobile {
         display: none;
       }
-
-        .footer-white {
-            background-color: #F2ECE7;
-        }
-        .footer__link-mail-block {
-            font-size: 30px;
-        }
         .footer__link-mail {
             font-family: "AvenirNextCyr-Bold", sans-serif;
             font-size: 30px;
@@ -1546,7 +1639,6 @@ color: #F2ECE7;
         .footer__social-links {
             display: flex;
             position: absolute;
-            margin-right: 50px;
             right: 10%;
         }
         .footer__social-link {
@@ -1566,7 +1658,7 @@ color: #F2ECE7;
             justify-content: space-around;
             align-items: center;
             position: absolute;
-            bottom: 10%;
+            bottom: 15%;
             gap: 40px;
             right: 10%;
         }
@@ -1598,10 +1690,8 @@ color: #F2ECE7;
             display: flex;
             position: absolute;
             bottom: 120%;
-            width: 90%;
-            max-width: 100%;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            justify-content: space-between;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -1614,35 +1704,70 @@ color: #F2ECE7;
             justify-content: center;
         }
         .footer__social-download-image {
-            max-width: 400px;
+            max-width: 290px;
             width: 100%;
             height: auto;
         }
         .slider__block {
-            max-width: 600px;
+            width: 584px;
             border-radius: 20px;
-            max-height: 600px;
             border: 2px solid transparent;
             transition: all 0.3s ease;
+            padding: 20px;
         }
           .slider__block:hover {
             border: 2px solid #676665;
             background-color: #302F2E;
+        }
+        .slider__block-inner {
+            max-width: 540px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+          .slider-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+        
+        .slider {
+            display: flex;
+            user-select: none;
+            cursor: url('/images/custom-cursor.svg') 8 8, auto;
+            gap: 40px;
+            min-width: max-content;
+            align-items: stretch;
+        }
+        .slider-link, .blog-tab-link {
+            cursor: url('/images/custom-cursor.svg') 8 8, auto;
+        }
+        .slider-link:active, .blog-tab-link:active {
+            cursor: grabbing;
+        }
+        
+        .slider:active {
+            cursor: grabbing;
+       }
+        .slider-block-text {
+            text-transform: none;
         }
         .slider-block-title {
             font-family: "AvenirNextCyr-Medium", sans-serif;
             font-size: 40px;
             color: #F2ECE7;
             text-transform: none;
+            margin: 20px 0 15px;
         }
         .slider-block-text {
             font-family: "AvenirNextCyr-Medium", sans-serif;
             font-size: 32px;
             color: #1A1A1A;
         }
-        .slider-block-inner {
-            width: 600px;
-            height: 800px;
+        .slider__wrapper {
+            display: flex;
+            overflow: hidden;
         }
         .yellow-text {
             color: #DDFF53;
@@ -1662,15 +1787,15 @@ color: #F2ECE7;
         }
         .telegram__title-blue {
             font-family: "AvenirNextCyr-Bold", sans-serif;
-            font-size: 128px;
+            font-size: 105px;
             color: #8FA7DF;
             text-transform: uppercase;
             text-align: right;
-            margin-bottom: 100px;
+            margin-bottom: 30px;
         }
         .telegram__title-white {
             font-family: "AvenirNextCyr-Bold", sans-serif;
-            font-size: 128px;
+            font-size: 105px;
             color: black;
             -webkit-text-stroke: 2px #fff;
             -webkit-text-fill-color: #1A1A1A;
@@ -1680,24 +1805,25 @@ color: #F2ECE7;
             display: flex;
             border: #686665 solid 1px;
             max-width: 1360px;
-            max-height: 598px;
             background-color: #302F2E;
             border-radius: 30px;
-            padding: 50px 30px;
+            padding: 50px 30px 70px;
+            position: relative;
         }
         .telegram__man-image {
             position: absolute;
-            right: 5%;
-            top: 17%;
+            right: 0%;
+            top: -53%;
             max-width: 290px;
         }
         .telegram__button-white-image {
             position: absolute;
             right: 5%;
-            top: 95%;
+            top: 91.5%;
         }
         .telegram__text-block-text {
-            margin-bottom: 100px;
+            margin-bottom: 50px;
+            max-width: 550px;
         }
         .telegram-school-title {
             font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -1712,12 +1838,13 @@ color: #F2ECE7;
         .main__learn {
             background-color: #DDFF53;
             max-width: 1400px;
-            height: 800px;
+            height: 550px;
             border-radius: 30px;
             margin-top: 20px;
             padding-top: 10px;
             position: relative;
             padding-bottom: 200px;
+            overflow: hidden;
         }
         .black-text-128 {
             font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -1729,16 +1856,27 @@ color: #F2ECE7;
             font-size: 128px;
             color: #F2ECE7;
         }
+        .main__learn-block-under {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .main__learn-block-under-inner {
+            display: flex;
+            flex-direction: column;
+            margin-right: 0px;
+        }
         .main__learn-title {
             text-align: center;
             margin-right: 0px;
             white-space: nowrap;
-            font-size: 110px;
+            font-size: 100px;
         }
         .main__learn-image-woman {
             position: absolute;
-            bottom: 0%;
-            left: 10%;
+            bottom: -5%;
+            left: -1%;
         }
         .main__learn-rating-block {
             display: flex;
@@ -1752,10 +1890,11 @@ color: #F2ECE7;
             text-align: left;
             text-transform: uppercase;
             line-height: 150%;
+            max-width: 500px;
         }
         .main__learn-text-block {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             margin-bottom: 10px;
         }
         .main__learn-rating-block-first {
@@ -1786,10 +1925,9 @@ color: #F2ECE7;
         }
         .main__learn-smartphone {
             position: absolute;
-            right: 0;
-            top: -35%;
-            overflow: hidden;
-            max-width: 400px;
+            right: 0.5%;
+            top: -500%;
+            max-width: 290px;
         }
         .main__learn-rating-block-star {
             max-width: 40px;
@@ -1799,6 +1937,7 @@ color: #F2ECE7;
             font-family: "AvenirNextCyr-Demi", sans-serif;
             color: #2C3311;
             font-size: 14px;
+            max-width: 150px;
         }
         .blocknote-opacity-right {
             width: 50px;
@@ -1832,8 +1971,8 @@ color: #F2ECE7;
             display: flex;
         }
         .blocknote-block {
-            height: 440px;
-            width: 440px;
+            height: 320px;
+            width: 300px;
             border-radius: 30px;
             overflow: hidden;
             position: relative;
@@ -1856,29 +1995,33 @@ color: #F2ECE7;
         }
         .main__analyzator {
             position: relative;
+            overflow: hidden;
+            height: 800px;
         }
         .main__analyzator-flexible-words-image {
             position: absolute;
             z-index: -1;
-            max-width: 1005px;
+            max-width: 1024px;
             left: 50%;
             transform: translate(-50%, 0%);
+            top: -25%;
         }
         .main__analyzator-download-image {
-            margin-left: 20px;
-            max-width: 250px;
+            max-width: 210px;
         }
         .main__analyzator-download {
-            margin-top: 50px;
-            flex-direction: column;
+            margin-top: 20px;
+            position: relative;
+            margin-left: 40px;
             display: flex;
-            margin-left: 10%;
+            gap: 10px;
         }
         .main__analyzator-bottom-title {
             font-family: "AvenirNextCyr-Demi", sans-serif;
             font-size: 30px;
             color: #F2ECE7;
             margin-bottom: 100px;
+            max-width: 450px;
         }
         .main__analyzator-aquamarine {
             color: #9FD8E5;
@@ -1894,27 +2037,101 @@ color: #F2ECE7;
         }
         .main__analyzator-bottom-text {
             font-size: 20px;
+            max-width: 400px;
         }
         .main__analyzator-bottom-text-block {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            width: 100%;
+            margin-top: 200px;
         }
         .main__analyzator-download-link {
             cursor: pointer;
         }
         .main__analyzator-smartphone {
             max-width: 500px;
+            position: absolute;
+            top: -10%;
+            left: 3%;
+        }
+        .main__smartphone {
+            margin-top: 100px;
+            position: relative;
+        }
+        .main__smartphone-block-title, .main__smartphone-block-title-white {
+            font-family: "AvenirNextCyr-Bold", sans-serif;
+            font-size: 40px;
+           color: #000; 
+        }
+        .main__smartphone-block-title-white {
+            color: #F2ECE7;
+        }
+        .main__smartphone-block-text {
+            font-family: "AvenirNextCyr-Bold", sans-serif;
+            color: rgba(242, 236, 231, 0.6);
+            font-size: 20px;
+        }
+        .main__smartphone-block-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 100px;
+            width: 320px;
+            height: 200px;
+            border-radius: 30px;
+            padding: 20px 0;
+            position: relative;
+        }
+        .main__smartphone-block {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            gap: 400px;
+        }
+        .main__smartphone {
+            overflow: hidden;
+            gap: 50px;
+            width: 100%;
+            overflow: hidden
+        }
+        .main__smartphone-row {
+            display: flex;
+            width: 100%;
+        }
+        .main__smartphone-block div[class*="block"] {
+            flex: 0 0 auto;
+            width: 360px;
+          }
+          .main__smartphone-big-image {
+            position: absolute;
+            z-index: 1000;
+            top: 4.5%;
+            max-width: 1024px;
+        }
+        .main__smartphone-association-image {
+            position: absolute;
+            bottom: -3%;
+            right: -3%;
+            z-index: 10;
+        }
+        .main__smartphone-block-inner-white {
+            border: 3px solid #fff;
         }
         .main__innovations-top-blot {
             position: absolute;
-            right: 3%;
+            right: 0%;
             top: -3%;
         }
         .main__innovations-education {
             position: absolute;
-            top: 13%;
-            right: -10%;
+            top: 10%;
+            right: 0%;
+            max-width: 600px;
         }
         .main__innovations, .investors__future, .school__lecturer-and-schools, .students__for-students {
             position: relative;
@@ -1931,6 +2148,7 @@ color: #F2ECE7;
         }
         .main__innovations-introduction-text {
             margin: 50px 0 100px;
+            max-width: 400px;
         }
         .main__innovations-introduction-title {
             margin-top: 100px;
@@ -1969,7 +2187,8 @@ color: #F2ECE7;
             justify-content: space-between;
         }
         .main__innovations-remembers-text {
-            margin-left: 15px;
+            margin: 70px 15px 0 0;
+            max-width: 450px;
         }
         .main__innovations-blot-bottom {
             position: absolute;
@@ -1978,17 +2197,14 @@ color: #F2ECE7;
         }
         .main__specials-title-white {
             text-align: end;
-            font-size: 115px;
+            font-size: 100px;
         }
         .main__specials-title-pink {
             font-family: "AvenirNextCyr-Bold", sans-serif;
-            font-size: 115px;
+            font-size: 100px;
             text-align: start;
             color: #DB79E2;
-            margin-top: 200px;
-        }
-        .main__specials-title-white {
-            margin-bottom: 50px;
+            margin-top: 80px;
         }
         .main__specials-images-block {
             display: flex;
@@ -2003,48 +2219,10 @@ color: #F2ECE7;
         }
         .main__specials-images-circle-image {
             max-width: 290px;
+            max-height: 250px;
         }
         .main__specials-images-button-image {
             max-width: 310px;
-        }
-        .main__smartphone {
-            margin-top: 100px;
-            overflow: hidden;
-            gap: 50px;
-        }
-        .main__smartphone-block-title, .main__smartphone-block-title-white {
-            font-family: "AvenirNextCyr-Bold", sans-serif;
-            font-size: 40px;
-           color: #000; 
-        }
-        .main__smartphone-block-title-white {
-            color: #F2ECE7;
-        }
-        .main__smartphone-block-text {
-            font-family: "AvenirNextCyr-Bold", sans-serif;
-            color: rgba(242, 236, 231, 0.6);
-            font-size: 20px;
-        }
-        .main__smartphone-block-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-right: 100px;
-            width: 270px;
-            height: 150px;
-            border-radius: 30px;
-            position: relative;
-        }
-        .main__smartphone-block {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            margin-top: 40px;
-        }
-        .main__smartphone {
-            overflow: hidden;
-            gap: 50px;
         }
         .row {
             overflow: hidden;
@@ -2052,7 +2230,7 @@ color: #F2ECE7;
             width: max-content;
         }
         .main__blog {
-            margin: 200px 0;
+            margin: 60px 0 260px;
         }
         .main__blog-title {
             -webkit-text-stroke: 3px #fff;
@@ -2065,29 +2243,6 @@ color: #F2ECE7;
             font-family: "AvenirNextCyr-Medium", sans-serif;
             font-size: 32px;
             color: #9c9895;
-        }
-        .slider-block-text {
-            text-transform: none;
-        }
-        .main__smartphone-big-image {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            max-width: 1005px;
-            max-height: 750px;
-            z-index: 1000;
-        }
-        .main__blog {
-            margin-top: 200px;
-        }
-        .main__smartphone-association-image {
-            position: absolute;
-            bottom: -3%;
-            right: -3%;
-            z-index: 10;
-        }
-        .main__smartphone-block-inner-white {
-            border: 3px solid #fff;
         }
         .main__state * {
             text-transform: none;
@@ -2189,7 +2344,6 @@ color: #F2ECE7;
           .questionnaire {
             overflow: hidden;
             position: relative;
-            min-height: 900px;
           }
           .questionnaire__wrapper {
             display: flex;
@@ -2198,6 +2352,7 @@ color: #F2ECE7;
           .questionnaire__input-block {
             display: flex;
             flex-direction: column;
+            max-width: 512px;
           }
           .questionnaire__form-input {
             text-transform: none;
@@ -2266,13 +2421,18 @@ color: #F2ECE7;
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            width: 620px;
             padding: 20px 0;
+            width: 100%;
         }
         .questionnaire__file-content {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            max-width: 730px;
+            width: 100%;
+            padding: 20px 0;
+            overflow: hidden;
         }
         .questionnaire__form-input-big {
             display: flex;
@@ -2282,20 +2442,26 @@ color: #F2ECE7;
             width: 743px;
         }
         .questionnaire__input-block-image {
-            margin: 50px 0;
+            margin: 20px 0;
+            max-width: 512px;
         }
         .questionnaire__image-smartphone {
             position: absolute;
-            right: -15%;
-            bottom: -20%;
+            right: -20%;
+            top: 0%;
+            bottom: auto;
             z-index: 0;
-            max-width: 900px;
-            max-height: 1400px;
+            max-width: 1000px;
+            max-height: 900px;
         }
-        .blog__tabs {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(5, auto);
+        .questionnaire__image-smartphone-investors {
+            top: -15%;
+        }
+
+        .blog__tabs-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
         }
         .blog-tab-title {
             font-family: "AvenirNextCyr-Medium", sans-serif;
@@ -2304,35 +2470,50 @@ color: #F2ECE7;
             text-transform: none;
             line-height: 48px;
         }
-        .blog-tab-block-inner {
+        .blog-tab-link {
             max-width: 445px;
-            max-height: 456px;
-            border-radius: 20px;
-            padding: 20px 10px 20px 10px;
+          }
+        .blog-tab-block-inner {
+            padding: 20px;
             border: 2px solid transparent;
             transition: all 0.3s ease;
         }
-        .blog-tab-block-inner:hover {
+        .blog-tab-block {
+            border-radius: 20px;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+        .blog-tab-block:hover {
             border: 2px solid #676665;
             background-color: #302F2E;
         }
+        .blog__sort-first {
+            margin-bottom: 20px;
+        }
         .blog__sort-text {
             font-family: "AvenirNextCyr-Demi", sans-serif;
-            font-size: 32px;
-            margin-bottom: 0px;
-            margin-left: 3px;
+            font-size: 28px;
+            margin-bottom: 8px;
+            margin-left: 8px;
+        }
+        .blog__sort-button {
+            background: none;
+            display: flex;
+            align-items: flex-end;
         }
         .blog__sort-title {
             font-family: "AvenirNextCyr-Demi", sans-serif;
-            font-size: 80px;
+            font-size: 60px;
             color: #686664;
             text-transform: none;
-            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        .blog__sort-title:hover {
+            color: #DDFF53;
         }
         .blog__sort-block {
             display: flex;
             align-items: flex-end;
-            cursor: pointer;
         }
         .blog__sort-top, .blog__sort-bottom {
             display: flex;
@@ -2346,24 +2527,27 @@ color: #F2ECE7;
         }
         .school__interactive-title {
             font-family: "AvenirNextCyr-Bold", sans-serif;
-            font-size: 64px;
+            font-size: 50px;
             text-align: start;
             color: #8FA7DF;
-            margin: 100px 0;
+            margin: 50px 0;
+            max-width: 600px;
         }
         .school__specials-title {
             font-family: "AvenirNextCyr-Bold", sans-serif;
             font-size: 64px;
             text-align: end;
             color: #DB79E2;
-            margin: 250px 0 100px;
+            margin: 100px 0 50px;
+            max-width: 600px;
         }
         .school__exclusive-title {
             font-family: "AvenirNextCyr-Bold", sans-serif;
             font-size: 64px;
             text-align: start;
             color: #FDEA6B;
-            margin: 250px 0 100px;
+            margin: 100px 0 50px;
+            max-width: 500px;
         }
         .school__input-black {
             background-color: #302F2E;
@@ -2390,7 +2574,6 @@ color: #F2ECE7;
               display: flex;
               max-width: 1360px;
               margin: 0 auto;
-              height: 590px;
               padding-top: 40px;
             }
             .students__opportunity-blot {
@@ -2404,29 +2587,25 @@ color: #F2ECE7;
                 color: #F2ECE7;
                 margin: 80px 0;
             }
-            .main__school {
-                background-color: #F2ECE7;
-            }
             .investors__contact-with-us-title {
+                font-size: 90px;
                 text-align: center;
                 margin-top: 100px;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
             .investors__contact-with-us {
                 margin-bottom: 100px;
-            }
-            .investors__look-for-text {
-              max-width: 970px;
             }
             .investors__look-for-gray-text {
               max-width: 870px;
             }
             .investors__look-for-title {
               font-family: "AvenirNextCyr-Bold", sans-serif;
-              font-size: 128px;
+              font-size: 110px;
               color: #8FA7DF;
               text-align: center;
               margin: 100px 0 50px;
+              white-space: nowrap;
             }
             .investors__look-for-description {
               background-color: #1A1A1A;
@@ -2439,49 +2618,47 @@ color: #F2ECE7;
               font-size: 64px;
               text-align: end;
               color: #FDEA6B;
-              margin: 300px 0 80px;
+              margin: 220px 0 80px;
             }
             .investors__uniqe-tech-title {
               font-family: "AvenirNextCyr-Bold", sans-serif;
               font-size: 64px;
               text-align: start;
               color: #9DDADB;
-              margin: 300px 0 80px;
+              margin: 220px 0 80px;
             }
             .investors__buisness-model-title {
               font-family: "AvenirNextCyr-Bold", sans-serif;
               font-size: 64px;
               text-align: end;
               color: #78E185;
-              margin: 300px 0 80px;
-            }
-            .investors__invaste-In-future-image {
-                position: absolute;
-                right: 7%;
-                top: 5%;
+              margin: 220px 0 80px;
             }
             .investors__market-image {
                 position: absolute;
                 z-index: 10;
-                top: -65%;
+                top: -50%;
                 max-width: 200px;
+                max-height: 270px;
             }
             .investors__uniqe-tech-image {
                 position: absolute;
                 z-index: 10;
-                top: -64%;
+                top: -52%;
                 right: 0;
                 max-width: 200px;
+                max-height: 270px;
             }
             .investors__buisness-model-image {
                 position: absolute;
                 z-index: 10;
-                top: -65%;
+                top: -54%;
                 max-width: 200px;
+                max-height: 270px;
             }
             .school__our-programs-main-title {
                 font-family: "AvenirNextCyr-Bold", sans-serif;
-                font-size: 112px;
+                font-size: 90px;
                 color: #DB79E2;
                 text-align: center;
                 margin: 100px 0;
@@ -2520,7 +2697,6 @@ color: #F2ECE7;
                 line-height: 140%;
             }
             .school__our-programs-ref {
-                width: 900px;
                 background-color: #FDEA6B;
                 border-radius: 30px;
                 height: 360px;
@@ -2541,17 +2717,17 @@ color: #F2ECE7;
             }
             .school__questionnaire-title {
                 font-family: "AvenirNextCyr-Bold", sans-serif;
-                font-size: 128px;
+                font-size: 90px;
                 color: #1A1A1A;
                 text-align: center;
-                margin: 100px 0 50px;
+                margin: 50px 0 50px;
             }
             .school__questionnaire-title2 {
                 display: none;
             }
             .school__for-free-image {
                 position: absolute;
-                top: 1%;
+                top: 1.5%;
                 right: 15%;
             }
             .school__for-teachers-title {
@@ -2564,30 +2740,33 @@ color: #F2ECE7;
             }
             .school__interactive-image {
                 position: absolute;
-                top: -55%;
+                top: -95%;
                 right: 0;
                 z-index: 10;
-                max-width: 200px;
+                max-width: 400px;
+                max-height: 400px;
             }
             .school__specials-image {
                 position: absolute;
-                top: -50%;
+                top: -95%;
                 z-index: 10;
-                max-width: 200px;
+                max-width: 400px;
+                max-height: 400px;
             }
             .school__exclusive-image {
                 position: absolute;
-                top: -55%;
+                top: -95%;
                 right: 0;
                 z-index: 10;
-                max-width: 200px;
+                max-width: 400px;
+                max-height: 400px;
             }
             .school__telegram {
-                margin-top: 200px;
-                margin-bottom: 200px;
+                margin-top: 50px;
+                margin-bottom: 300px;
             }
             .students__for-free {
-                margin-bottom: 200px;
+                margin-bottom: 100px;
             }
             .students__for-free-image {
                 position: absolute;
@@ -2637,9 +2816,13 @@ color: #F2ECE7;
                 left: 25%;
                 top: 88%;
             }
+            .students__questionnaire {
+                margin-bottom: 300px;
+            }
             .students__questionnaire-title {
                 text-align: center;
-                margin: 100px;
+                margin: 50px 0;
+                font-size: 100px;
             }
             .blog__switch-pagination-container {
                 font-family: "AvenirNextCyr-Demi", sans-serif;
@@ -2692,22 +2875,6 @@ color: #F2ECE7;
               .header__dropdown-menu {
                 z-index: 1000;
               }
-              .slider-container {
-                overflow: hidden;
-                width: 100%;
-                position: relative;
-            }
-            
-            .slider {
-                display: flex;
-                cursor: grab;
-                user-select: none;
-                cursor: url('/images/custom-cursor.svg') 8 8, auto;
-            }
-            
-            .slider:active {
-                cursor: grabbing;
-           }
            .footer__woman-image-reverse, .students__instruction-image-arrow-bottom-reverse {
             display: none;
            }
@@ -2781,17 +2948,14 @@ color: #F2ECE7;
         .students__for-students {
             height: 2700px;
         }
-        .questionnaire-for-margin {
-            margin-bottom: 300px;
+        .questionnaire__image-smartphone-students {
+            top: -15%;
         }
         .questionnaire__form {
             max-width: 512px;
         }
         .questionnaire__form-input, .questionnaire__upload-block {
             max-width: 512px;
-        }
-        .questionnaire__input-block-text5 {
-            display: none;
         }
         .school__for-teachers-title {
             font-size: 80px;
@@ -2815,9 +2979,6 @@ color: #F2ECE7;
         .investors__contact-with-us {
             margin-bottom: 0;
         }
-        .questionnaire__input-block-image {
-            max-width: 512px;
-        }
         .telegram__text-block {
             max-width: 700px;
         }
@@ -2828,29 +2989,22 @@ color: #F2ECE7;
             font-size: 100px;
         }
         .investors__invaste-In-future-image {
-            max-width: 500px;
-            max-height: 200px;
-            top: 4%;
+            position: absolute;
+            max-width: 550px;
+            max-height: 230px;
+            top: 5%;
+            right: 3%;
         }
         .investors__invaste-In-future-text  {
-            margin-top: 150px;
+            margin-top: 30px;
+            font-size: 20px;
+            max-width: 450px;
         }
-        .investors__market-title {
-            margin: 120px 0 100px 0;
-        }
-        .investors__uniqe-tech-title {
-            margin: 120px 0 100px 0;
-        }
-        .investors__buisness-model-title {
-            margin: 120px 0 100px 0;
-        }
-        .main__innovations-remembers-text2 {
-            display: none;
+        .investors__market-title, .investors__uniqe-tech-title, .investors__buisness-model-title {
+            margin: 100px 0 50px 0;
+            font-size: 50px;
         }
         .main__specials-title-white2 {
-            display: none;
-        }
-        .main__specials-title-white3 {
             display: none;
         }
         .footer__link, .footer__link-mail {
@@ -2862,14 +3016,8 @@ color: #F2ECE7;
     .footer__link-mail:hover {
     color: #F2ECE7;
     }
-    .blog__sort-title {
-        font-size: 60px;
-    }
     .blog__switch {
         margin-bottom: 250px;
-    }
-    .blog-tab-display-none {
-        display: none;
     }
     .slider-link, .blog-tab-link {
         cursor: url('/images/custom-cursor.svg') 8 8, auto;
@@ -2879,7 +3027,7 @@ color: #F2ECE7;
         justify-content: flex-end;
     }
     .main__blog-link-block1 {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .blog__sort-first {
         margin-bottom: 20px;
@@ -2909,8 +3057,7 @@ color: #F2ECE7;
         display: flex;
         gap: 20px;
         justify-content: flex-start;
-        width: 100%;
-        margin-left: 40px;
+        width: 90%;
         overflow-x: auto;
         scrollbar-width: thin;
         scrollbar-color: #ccc transparent;
@@ -2937,6 +3084,7 @@ color: #F2ECE7;
       }
       .questionnaire__file-label {
         cursor: pointer;
+        width: 100%;
       }
       .questionnaire__file-label:hover .questionnaire__file-text-for-hover {
         text-decoration: underline;
@@ -2984,22 +3132,52 @@ color: #F2ECE7;
         max-width: 540px;
         text-transform: none;
       }
-      .blog__telegram {
-        display: none;
+      .colors__titles-block-right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .colors__titles-block-left {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+      body.light-body {
+        background-color: #F2ECE7 !important;
+        color: #1A1A1A;
       }
-      .investors__blot {
-        display: none;
+      .main__learn-title2 {
+        margin-bottom: 50px;
       }
-      .no-display {
+      .main__innovations-offer-text, .main__blog-text {
+        max-width: 450px;
+      }
+      .telegram__description-block-text {
+        max-width: 850px;
+      }
+      .investors__look-for-text {
+        max-width: 750px;
+      }
+      .investors__telegram {
+        margin-bottom: 300px;
+    }
+    .telegram__man-image1 {
+        top: 0%;
+        z-index: 1000;
+        right: 0%;
+        max-width: 300px;
+    }
+    .blocknote-block-position-mobile {
+        display: none;
+    }
+      .no-display, .students__telegram, .investors__blot, .blog__telegram, .main__specials-title-white3, .main__innovations-remembers-text2, .blog-tab-display-none, .blog__tabs, .investors__invaste-In-future-image-mobile, .br-display, .students__instruction-image-3-mobile {
         display: none;
     }
 }
 @media (max-width: 1024px) {
     .container {
         max-width: 768px;
-    }
-    .container__header {
-        max-width: 700px;
+        padding: 0 10px;
     }
     .header__links {
         gap: 10px;
@@ -3014,7 +3192,7 @@ color: #F2ECE7;
         font-size: 26px;
     }
     .main__smartphone-big-image {
-        max-width: 730px;
+        max-width: 768px;
         z-index: 1000;
     }
     .main__specials-images {
@@ -3029,7 +3207,7 @@ color: #F2ECE7;
         font-size: 80px;
     }
     .telegram__button-white-image {
-        top: 97%;
+        top: 88%;
     }
     .blocknote-block-text {
         font-size: 20px;
@@ -3076,7 +3254,7 @@ color: #F2ECE7;
         right: 15%;
     }
     .blocknote-opacity-bottom2, .blocknote-opacity-top2 {
-       left: 50%;
+       left: 49%;
     }
     .blocknote-opacity-right-block {
         display: flex;
@@ -3094,37 +3272,52 @@ color: #F2ECE7;
     }
     .main__analyzator-flexible-words-image {
         max-width: 748px;
-        top: 30%;
+        top: 10%;
+        max-height: 500px;
     }
     .main__analyzator-smartphone {
         max-width: 700px;
         max-height: 700px;
-    }
-    .main__analyzator-bottom-text-block {
-        width: 100%;
-
+        top: 0%;
     }
     .main__analyzator-bottom-title {
         margin-right: auto;
         margin-left: 20px;
-        font-size: 18px;
+        font-size: 28px;
         margin-bottom: 50px;
+        max-width: 400px;
     }
     .main__analyzator-bottom-text {
         margin-right: 20px;
-        font-size: 16px;
+        font-size: 24px;
     }
     .main__innovations {
         max-width: 750px;
         margin: 0 auto;
     }
+    .main__learn {
+        height: 680px;
+    }
     .main__learn-smartphone {
-        top: -45%;
-        right: 10%;
+        position: absolute;
+        right: 5%;
+        top: -110%;
         max-width: 300px;
+        max-height: 600px;
        }
+       .main__learn-title {
+        font-size: 80px;
+    }
+    .main__learn-title2 {
+        margin-bottom: 10px;
+        margin-right: 110px;
+    }
+    .main__analyzator-download {
+        gap: 0;
+    }
        .main__analyzator {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+        height: 1000px;
        }
        .main__specials-title-pink, .white-text-128, .main__specials-title-white {
         font-size: 65px;
@@ -3149,12 +3342,7 @@ color: #F2ECE7;
       }
       .container__footer {
         max-width: 768px;
-        height: 350px; 
-    }
-    .blog__tabs {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, auto);
+        height: 353px; 
     }
     .blog-tab-title {
         line-height: 20px;
@@ -3166,25 +3354,16 @@ color: #F2ECE7;
         display: block;
         margin-bottom: 20px;
     }
-    .blog__sort-title {
-        font-size: 20px;
-        white-space: nowrap;
-    }
-    .blog__sort-text {
-        font-size: 12px;
-    }
-    .blog__sort-block-english, .blog__sort-learn {
-        display: flex;
-        gap: 100px;
-    }
     .state__content-image {
         max-width: 768px;
+        max-height: 500px;
     }
     .blog-tab-block {
         max-width: 500px;
     }
     .blog-tab-image {
         max-width: 350px;
+        max-height: 210px;
     }
     .blog-tab-title {
         line-height: 40px;
@@ -3195,51 +3374,53 @@ color: #F2ECE7;
     .questionnaire__image-smartphone {
         display: none;
     }
-    .questionnaire__form {
-        margin: 0 auto;
+    .students__questionnaire {
+        margin-bottom: 220px;
     }
     .students__questionnaire-title {
-        margin: 80px 0;
-    }
-    .questionnaire {
-        min-height: 700px;
+        margin: 50px 0;
     }
     .questionnaire__wrapper {
-        justify-content: center;
+        max-width: 1024px;
+        width: 100%;
     }
     .students__instruction-image-man {
         max-width: 300px;
+        max-height: 400px;
     }
     .students__instruction-image-1 {
         max-width: 350px;
-        top: 55%;
+        top: 52%;
+        max-height: 300px;
     }
     .students__instruction-image-1-1 {
         max-width: 350px;
-        top: 62%;
+        top: 59%;
+        max-height: 300px;
     }
     .students__instruction-image-2 {
         max-height: 350px;
         max-width: 300px;
-        top: 75%;
-        left: 10%;
+        top: 70%;
+        left: 8%;
     }
     .students__instruction-image-3 {
         max-width: 450px;
         top: 85%;
+        max-height: 300px;
     }
     .students__instruction-image-arrow-bottom {
-        max-width: 90px;
-        top: 69%;
+        max-width: 100px;
+        top: 63%;
     }
     .students__instruction-image-arrow-left {
         max-width: 90px;
-        top: 74%;
-        right: 40%;
+        top: 70%;
+        right: 39%;
     }
     .students__instruction-image-arrow-right {
-        max-width: 90px;
-        top: 88%;
+        max-width: 80px;
+        top: 85%;
     }
     .students__for-free {
         margin-bottom: 50px;
@@ -3254,6 +3435,7 @@ color: #F2ECE7;
     .students__for-free-image {
         max-width: 500px;
         max-height: 200px;
+        top: 5%;
     }
     .students__opportunity-man {
         max-width: 300px;
@@ -3272,19 +3454,19 @@ color: #F2ECE7;
         max-height: 270px;
     }
     .school__interactive-image {
-        top: -25%;
-        right: 25%;
+        max-width: 200px;
+        top: -23%;
+        right: 23%;
     }
     .school__specials-image {
-        top: -25%;
-        left: 27%;
+        max-width: 200px;
+        top: -24%;
+        left: 25%;
     }
     .school__exclusive-image {
-        top: -25%;
-        right: 25%;
-    }
-    .school__our-programs-ref {
-        max-width: 728px;
+        max-width: 200px;
+        top: -23%;
+        right: 21.5%;
     }
     .school__our-programs-partnerka-image {
         right: 5%;
@@ -3299,14 +3481,14 @@ color: #F2ECE7;
         top: 2%;
     }
     .investors__invaste-In-future-text  {
-        margin-top: 150px;
+        margin-top: 120px;
     }
     .investors__market-title {
         margin: 80px 0 100px 0;
     }
     .investors__market-image {
         max-width: 200px;
-        top: -35%;
+        top: -15%;
         left: 30%;
     }
     .investors__uniqe-tech-title {
@@ -3314,64 +3496,174 @@ color: #F2ECE7;
     }
     .investors__uniqe-tech-image {
         max-width: 200px;
-        top: -30%;
-        right: 20%;
+        top: -19%;
+        right: 25%;
     }
     .investors__buisness-model-title {
         margin: 80px 0 100px 0;
     }
     .investors__buisness-model-image {
         max-width: 200px;
-        top: -29%;
+        top: -15%;
         left: 27%;
     }
     .investors__look-for-gray-text {
         max-width: 400px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
     .telegram__man-image {
-        top: 25%;
-    }
-    .questionnaire__form {
-        margin-left: 0;
-        margin-right: 0;
+        max-width: 200px;
+        top: -75%;
     }
     .telegram__description-block-text {
         max-width: 500px;
         font-size: 20px;
     }
-    .main__learn-title {
-        font-size: 80px;
-    }
     .main__innovations-education {
-        top: 5%;
+        top: 3.5%;
+        right: 0;
+        max-width: 400px;
     }
     .main__innovations-blocknote-image {
         max-width: 270px;
         max-height: 200px;
     }
-    .main__specials-title-white3 {
+    .footer__social-download-image {
+        max-width: 240px;
+    }
+    .blog__sort-text {
+        font-size: 23px;
+        margin-bottom: 6px;
+    }
+    .blog__sort-title {
+        font-size: 48px;
+    }
+    .blog__sort-block-english, .blog__sort-learn {
+        display: flex;
+        width: 100%;
+        gap: 100px;
+    }
+    .main__analyzator-download {
+        flex-direction: column;
+    }
+    .main__analyzator-download-image {
+        max-height: 100px;
+        max-width: 300px;
+    }
+    .main__analyzator-bottom-text-block {
+        margin-top: 600px;
+    }
+    .main__innovations-introduction-text {
+        margin: 50px 0 50px;
+        font-size: 20px;
+        max-width: 350px;
+    }
+    .main__innovations-block-image {
+        width: 340px;
+    }
+    .main__innovations-remembers-text {
+        max-width: 340px;
+        font-size: 24px;
+    }
+    .main__innovations-offer-text {
+        max-width: 340px;
+        font-size: 24px;
+    }
+    .main__specials-images-circle-image, .main__specials-images-button-image {
+        max-width: 400px;
+        max-height: 358px;
+        display: block;
+        width: 100%;
+    }
+    .main__specials-images-button-image {
+        max-width: 420px;
+        max-height: 112px;
+        margin-bottom: 30px;
+    }
+    .investors__look-for-title {
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
+    .telegram__man-image1 {
+        max-width: 200px;
+        top: 0%;
+    }
+    .questionnaire__input-block {
+        max-width: 768px;
+        width: 100%;
+    }
+    .investors__telegram {
+        margin: 50px 0 250px;
+    }
+    .questionnaire__input-block-text1, .questionnaire__input-block-text3 {
+        max-width: 768px;
+    }
+    .questionnaire__input-block-image {
+        max-width: 768px;
+        width: 100%;
+    }
+    .questionnaire__form-input {
+        max-width: 768px;
+        width: 100%;
+    }
+    .questionnaire__form {
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .telegram__title-blue, .telegram__title-white  {
+        font-size: 70px;
+        text-align: center;
+    }
+    .school__our-programs-main-title {
+        font-size: 65px;
+        margin: 50px 0 70px;
+    }
+    .school__questionnaire-title {
+        font-size: 65px;
+    }
+    .school__our-programs-title {
+        font-size: 40px;
+    }
+    .school__our-programs-text {
+        font-size: 28px;
+    }
+    .questionnaire__upload-block {
+        max-width: 768px;
+        width: 100%;
+    }
+    .investors__contact-with-us-title {
+        margin-top: 60px;
+    }
+    .main__specials-title-white3, .no-display-1024 {
         display: none;
     }
-    .main__specials-images-circle-image {
-        max-height: 200px;
+    .blocknote-block-position-mobile {
+        display: flex;
     }
 }
 @media (max-width: 768px) {
-    .container__footer {
-        width: 275px;
-        height: 360px;
-        background-image: url("/images/footer__background-mobile.svg");
-        background-size: 100% auto;
-        background-position: center;
-        background-repeat: no-repeat;
-        flex-shrink: 0;
-        padding: 0;
-    }
-    
     .container {
         max-width: 395px;
         padding: 0 10px;
     }
+    .container__footer {
+        max-width: 375px;
+        min-height: 490px;
+        background-image: url("/images/footer__background-mobile.svg");
+        background-size: 100% auto;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    body.no-scroll {
+        overflow: hidden;
+      }
     .header__links {
         display: none;
     }
@@ -3401,20 +3693,46 @@ color: #F2ECE7;
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 100px;
+        top: 6%;
         left: 50%;
         background-color: #1A1A1A;
         width: 100%;
         height: 100%;
-        max-width: 376px;
+        max-width: 377px;
         transform: translate(-50%, 0);
-
+    }
+    .header__dropdown-menu-school {
+        background-color: #F2ECE7;
     }
     .header__link-dropdown {
         color: #F2ECE7;
         background-color: #1A1A1A;
         padding: 20px;
         margin-left: auto;
+        font-size: 20px;
+    }
+    .header__link-dropdown-school {
+        background-color: #F2ECE7;
+        color: #1A1A1A;
+    }
+    .header__link-dropdown-school {
+        background-color: #F2ECE7;
+        color: #1A1A1A;
+    }
+    .header__link-dropdown-download {
+        font-family: "AvenirNextCyr-Demi", sans-serif;
+        background-color: #DDFF53;
+        border-radius: 50px;
+        color: #1A1A1A;
+        max-height: 44px;
+        max-width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .header__link-dropdown-download:hover {
+        color: #1A1A1A;
     }
     .header__button-download-dropdown {
         font-family: "AvenirNextCyr-Bold", sans-serif;
@@ -3430,9 +3748,6 @@ color: #F2ECE7;
     }
     .header__dropdown-menu.active {
         display: flex;
-    }
-    .header__dropdown-menu {
-        top: 88px;
     }
     .header__lines.active .header__line:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
@@ -3451,16 +3766,20 @@ color: #F2ECE7;
     max-height: 80px;
    }
    .blocknote-block {
-    height: 220px;
+    height: 280px;
     max-width: 300px;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 100%;
 }
+.blocknote-block-main {
+    height: 220px;
+    border-radius: 20px;
+}
 .blocknote-opacity-top {
-    top: -15%;
+    top: -12%;
 }
 .blocknote-opacity-bottom {
-    bottom: -15%;
+    bottom: -12%;
 }
 .white-text-128 {
     font-size: 40px;
@@ -3470,9 +3789,9 @@ color: #F2ECE7;
 }
 .footer__social-links {
     display: inline-block;
-    margin-top: 67px;
-    left: 0;
-    top: 0%;
+    margin-top: 0px;
+    left: 1%;
+    top: 35%;
 }
 .footer__social-links-column {
     display: flex;
@@ -3480,23 +3799,24 @@ color: #F2ECE7;
 .footer__woman-image-reverse {
     display: block;
     z-index: 1000;
-    bottom: 80%;
+    top: 20%;
     max-width: 150px;
     position: absolute;
-    right: 0;
+    right: 2%;
     max-height: 200px;
+    transition: all 0.2s;
 }
 .footer__title {
     display: none;
 }
 .footer__title-mobile {
     font-family: "AvenirNextCyr-Bold", sans-serif;
-    font-size: 70px;
+    font-size: 48px;
     color: #1A1A1A;
     -webkit-text-stroke: 2px gray;
     -webkit-text-fill-color: #1A1A1A;
     position: absolute;
-    bottom: 90%;
+    top: -7%;
     left: 3%;
     display: block;
 }
@@ -3507,7 +3827,8 @@ color: #F2ECE7;
     align-items: center;
     position: absolute;
     bottom: 3%;
-    gap: 40px;
+    gap: 60px;
+    max-width: 320px;
 }
 .footer__social-image {
     max-width: 35px;
@@ -3528,25 +3849,17 @@ color: #F2ECE7;
 .footer__woman-image {
     display: none;
 }
-.footer__link-mail-block {
-    display: block;
-    position: absolute;
-    bottom: 2%;
-    left: 55%;
-    transform: translate(-50%, 0);
-    width: 100%;
-    text-align: end;
-}
 .footer__links-inner {
     width: 100%;
 }
 .footer__download-images {
     flex-direction: column;
-    gap: 20px;
-    bottom: 125%;
+    gap: 18px;
+    bottom: 115%;
+    padding: 0 10px;
 }
 .main__learn-title {
-    font-size: clamp(40px, 5vw, 48px);
+    font-size: 48px;
     max-width: 320px;
     text-align: start;
     margin-left: 10px;
@@ -3554,6 +3867,7 @@ color: #F2ECE7;
 .main__learn-text {
     font-size: 10px;
     text-align: start;
+    max-width: 220px;
 }
 .main__learn-text-block {
     justify-content: flex-start;
@@ -3565,6 +3879,8 @@ color: #F2ECE7;
 }
 .main__learn-rating-pink-text {
     font-size: 8px;
+    -webkit-text-stroke: 0.4px #1A1A1A;
+    -webkit-text-fill-color: #DB79E2;
 }
 .main__learn-rating-block-star {
     max-width: 16px;
@@ -3572,6 +3888,7 @@ color: #F2ECE7;
 }
 .main__learn-rating-pink-text-small {
     font-size: 6px;
+    max-width: 60px;
 }
 .main__learn {
     max-width: 375px;
@@ -3589,24 +3906,29 @@ color: #F2ECE7;
     left: 0;
 }
 .main__learn-smartphone {
-    max-width: 150px;
-    max-height: 300px;
+    position: absolute;
     right: 0%;
-    top: -25%;
+    top: -90%;
+    max-width: 160px;
+    max-height: 290px;
 }
 .main__analyzator {
     position: relative;
+    height: 450px;
+    margin-bottom: 0;
    }
 .main__analyzator-download-image {
-    max-width: 150px;
-    max-height: 80px;
+    max-width: 135px;
+    max-height: 55px;
     margin-left: 0;
 }
 .main__analyzator-download {
-    margin-top: 0px;
+    margin-top: 10px;
     flex-direction: column;
     display: flex;
     margin-left: 0%;
+    position: relative;
+    margin-left: 10px;
 }
 .main__analyzator-download-link {
     max-height: 50px;
@@ -3615,22 +3937,27 @@ color: #F2ECE7;
     max-width: 300px;
     max-height: 300px;
     z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
 }
 .main__analyzator-bottom {
     margin-top: 0;
 }
 .main__analyzator-bottom-text {
-    text-align: end;
+    text-align: start;
     font-size: 10px;
+    max-width: 250px;
 }
 .main__analyzator-bottom-title {
     font-size: 16px;
     margin-bottom: 20px;
+    max-width: 200px;
 }
 .main__analyzator-flexible-words-image {
-    max-width: 290px;
+    max-width: 490px;
     max-height: 150px;
-    top: 45%;
+    top: 15%;
     z-index: 0;
 }
 .footer__link {
@@ -3638,12 +3965,8 @@ color: #F2ECE7;
     color: #F2ECE7;
 }
 .footer__link-mail {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-}
-.telegram__text-block-text {
-    font-size: 12px;
-    text-transform: uppercase;
 }
 .main__specials-title-pink {
     display: none;
@@ -3661,36 +3984,43 @@ color: #F2ECE7;
 .main__innovations-remembers-text {
     font-size: 20px;
 }
-.main__innovations-offer-text{
+.main__innovations-offer-text {
     font-size: 20px;
+    max-width: 300px;
 }
 .main__innovations-introduction-text {
     font-size: 12px;
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 60px;
+    max-width: 270px;
 }
 .telegram__description-block-text {
     font-size: 16px;
 }
 .telegram__text-block-text {
-    margin-bottom: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
     text-align: start;
     max-width: 190px;
 }
 .telegram__button-white-image {
-    max-width: 300px;
+    max-width: 260px;
     max-height: 200px;
     left: 50%;
     transform: translate(-50%, -20%);
+    top: 93%;
 }
 .telegram__man-image {
-    max-width: 150px;
-    top: -10%;
+    max-width: 140px;
+    top: -33%;
+    max-height: 200px;
 }
 .telegram__man-image1 {
-    right: 0;
-    top: -7%;
-    max-width: 105px;
+    right: -4%;
+    top: 18%;
+    max-width: 130px;
+    max-height: 180px;
 }
 .telegram__title-blue, .telegram__title-white  {
     font-size: 48px;
@@ -3698,44 +4028,24 @@ color: #F2ECE7;
 }
 .main__blog-title {
     font-size: 48px;
+    -webkit-text-stroke: 1px #fff;
 }
 .slider-block-text {
     font-size: 14px;
+    max-width: 180px;
 }
 .slider-block-title {
     font-size: 20px;
     max-width: inherit;
             margin: 20px 0;
 }
-.slider-block-inner {
-    max-width: 250px;
-    max-height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 20px;
-}
 .slider-block-image {
-    max-width: 180px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 120px;
     border-radius: 20px;
 }
 .slider-container {
-    margin-top: 50px;
-    height: 290px;
-}
-.slider-link {
-    max-height: 260px;
-}
-.slider__block {
-    max-height: 280px;
-    max-width: 300px;
-    margin-left: auto;
-}
-.slider__block:hover {
-    border: 2px solid #676665;
-    background-color: transparent;
+    margin-top: 0px;
 }
 .main__blog-link {
     display: none;
@@ -3751,11 +4061,13 @@ color: #F2ECE7;
     color: #DDFF53;
 }
 .main__blog {
-    margin-bottom: 400px;
+    margin-bottom: 460px;
     margin-top: 50px;
 }
 .main__blog-text {
     font-size: 12px;
+    max-width: 230px;
+    margin-top: 20px;
 }
 .main__innovations-offer {
     flex-direction: column;
@@ -3783,6 +4095,8 @@ color: #F2ECE7;
 .main__innovations-remembers-text2 {
 font-size: 20px;
 margin-top: 30px;
+display: block;
+max-width: 300px;
 }
 .main__innovations-remembers-pink-block {
     background-color: #FDEA6B;
@@ -3801,14 +4115,12 @@ margin-top: 30px;
 .main__innovations {
     max-width: 375px;
     border-radius: 20px;
-    padding: 0;
     padding: 0 10px;
     background-size: 81px 81px;
+    width: 100%;
 }
-
-.footer__title-mobile {
-    font-size: 48px;
-    bottom: 86%;
+.main__smartphone {
+    margin-top: 70px;
 }
 .main__smartphone-block-inner {
     max-width: 115px;
@@ -3832,8 +4144,18 @@ margin-top: 30px;
     font-size: 10px;
 }
 .main__smartphone-big-image {
-    max-height: 350px;
-    max-width: 200px;
+    max-height: 320px;
+    max-width: 320px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+.main__smartphone-row {
+    width: 375px;
+}
+.main__smartphone-block-inner {
+    margin-right: 30px;
 }
 .main__innovations-introduction-title, .main__learn-title {
     white-space: normal;
@@ -3851,28 +4173,32 @@ margin-top: 30px;
 }
 .main__innovations-introduction-title {
     margin-top: 30px;
+    max-width: 300px;
 }
 .main__innovations-introduction {
-    margin-top: 60px;
+    position: relative;
+    max-width: 290px;
+    margin: 60px auto 0 auto;
 }
 .main__innovations-education {
     max-width: 280px;
-    max-height: 100px;
-    top: 7%;
+    max-height: 120px;
+    top: 22%;
+    left: 42%;
+    transform: translateX(-42%);
+    right: auto;
 }
 .main__specials-images-circle-image, .main__specials-images-button-image {
-    max-width: 100%;
-    height: auto;
+    max-width: 375px;
+    height: 100%;
     display: block;
+    width: 100%;
 }
 .main__specials-images-block {
     max-width: 375px;
     align-items: center;
     width: 100%;
     margin-bottom: 30px;
-}
-.main__specials-images-button-image {
-    max-height: 70px;
 }
 .main__specials {
     margin-top: 30px;
@@ -3910,17 +4236,19 @@ margin-top: 30px;
     display: none;
 }
 .questionnaire__input-block-text2, .questionnaire__input-block-text4 {
-    max-width: 300px;
+    max-width: 375px;
     display: block;
 }
 .questionnaire__input-block-image {
-    max-width: 300px;
+    max-width: 375px;
     margin: 0;
 }
 .questionnaire__form-input {
     max-width: 375px;
     padding: 10px 5px;
     width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
 }
 .questionnaire__form-input-big {
     padding-bottom: 100px;
@@ -3933,63 +4261,73 @@ margin-top: 30px;
     border-radius: 20px;
     max-width: 375px;
     background-size: 81px 81px;
+    padding: 10px;
   }
 .investors__invaste-In-future-title {
     font-size: 24px;
     margin-bottom: 40px;
 }
 .investors__invaste-In-future-image {
-    max-width: 190px;
-    max-height: 60px;
-    top: 1.7%;
+    max-width: 200px;
+    max-height: 70px;
+    top: 1.2%;
+    right: 8%;
 }
 .investors__market-title {
-    margin: 50px 0 10px;
+    margin: 60px 0 25px;
     font-size: 20px;
     text-align: end;
     max-width: 200px;
 }
 .investors__market-image {
-    max-width: 120px;
-    top: -45%;
-    left: 0;
+    max-width: 140px;
+    top: -20%;
+    left: 0%;
 }
 .investors__uniqe-tech-title {
     font-size: 20px;
-    margin: 50px 0 10px;
+    margin: 50px 0 25px;
     max-width: 100px;
 }
 .investors__uniqe-tech-image {
-    max-width: 120px;
-    top: -45%;
+    max-width: 140px;
+    top: -20%;
     right: 0;
 }
 .investors__buisness-model-title {
     font-size: 20px;
-    margin: 50px 0 10px;
+    margin: 50px 0 25px;
     max-width: 230px;
 }
 .investors__buisness-model-image {
-    max-width: 120px;
-    top: -45%;
-    left: -10%;
+    max-width: 140px;
+    top: -18%;
+    left: -4%;
 }
 .investors__look-for-title {
     font-size: 32px;
-    margin: 40px 0;
+    margin: 40px 0 15px;
     white-space: nowrap;
+}
+.school__for-teachers {
+    max-width: 290px;
+    margin: 0 auto;
 }
 .school__for-teachers-title {
     font-size: 24px;
+    max-width: 300px;
+    white-space: nowrap;
 }
 .school__for-free-image {
     max-width: 200px;
-    top: 1.7%;
+    top: 1.5%;
+    right: 0;
     max-height: 70px;
 }
 .school__for-teachers-text {
     margin-bottom: 20px;
     margin-top: 20px;
+    max-width: 250px;
 }
 .school__interactive-title {
     font-size: 20px;
@@ -4019,12 +4357,13 @@ margin-top: 30px;
     -webkit-text-stroke: #F2ECE7 0px;
     -webkit-text-fill-color: #F2ECE7;
 }
-.school__our-programs-partnerka-image, .school__our-programs-ref-image {
+.school__our-programs-ref-image {
     display: none;
 }
 .school__our-programs-title {
     font-size: 20px;
     text-align: center;
+    max-width: 150px;
 }
 .school__our-programs-text {
     font-size: 12px;
@@ -4045,55 +4384,58 @@ margin-top: 30px;
     display: none;
 }
 .school__questionnaire-title2 {
-                font-family: "AvenirNextCyr-Bold", sans-serif;
-                font-size: 40px;
-                color: #1A1A1A;
-                text-align: start;
-                margin: 20px 0;
-                display: block;
-            }
-            .school__telegram {
-                margin-top: 30px;
-            }
+    font-family: "AvenirNextCyr-Bold", sans-serif;
+    font-size: 40px;
+    color: #1A1A1A;
+    text-align: start;
+    margin: 20px 0;
+    display: block;
+}
+.school__telegram  {
+    margin-top: 30px;
+    margin-bottom: 480px;
+}
 .telegram__title-white {
-    -webkit-text-stroke: #1A1A1A 2px;
-    -webkit-text-fill-color: #F2ECE7;
+    -webkit-text-stroke: #F2ECE7 1px;
+    -webkit-text-fill-color: #1A1A1A;
 }
 .school__interactive-image {
     max-width: 150px;
     max-height: 220px;
-    top: -20%;
+    top: -15%;
     right: -13%;
 }
 .school__specials-image {
     max-width: 150px;
     max-height: 220px;
-    top: -20%;
+    top: -16%;
     left: -13%;
 }
 .school__exclusive-image {
     max-width: 150px;
     max-height: 220px;
-    top: -25%;
+    top: -16%;
     right: -13%;
 }
 .students__for-free-title {
     font-size: 32px;
+    max-width: 280px;
 }
 .students__for-free-text {
     font-size: 12px;
+    margin-bottom: 0px;
+    margin-top: 110px;
+    max-width: 250px;
 }
 .students__for-free-image {
     max-width: 220px;
     max-height: 180px;
-    top: 1.6%;
-}
-.students__opportunity {
-max-width: 280px;
+    top: 2%;
 }
 .students__opportunity-blot {
     max-width: 100px;
     max-height: 190px;
+    top: -15%;
 }
 .students__opportunity-man {
     display: none;
@@ -4101,7 +4443,7 @@ max-width: 280px;
 .students__opportunity-man1 {
     display: block;
     position: absolute;
-    top: 12%;
+    top: 11.5%;
     right: 0;
     max-width: 150px;
     max-height: 200px;
@@ -4110,22 +4452,27 @@ max-width: 280px;
 .students__opportunity {
     padding-top: 0;
     max-width: 280px;
-    max-height: 542px;
+    border-radius: 20px;
+    padding-bottom: 25px;
 }
 .students__questionnaire {
-    margin-bottom: 500px;
+    margin-bottom: 20px;
     max-width: 375px;
 }
 .questionnaire__upload-block {
-    max-width: 290px;
+    max-width: 375px;
+    max-height: 130px;
+    padding: 10px 0;
+    margin-top: 10px;
 }
 .students__questionnaire-title {
     text-align: start;
     margin: 20px 0;
 }
 .questionnaire__input-block-text5 {
-    max-width: 300px;
+    max-width: 270px;
     font-size: 12px;
+    margin-bottom: 10px;
 }
 .students__for-students {
     position: relative;
@@ -4135,10 +4482,14 @@ max-width: 280px;
     background-size: 81px 81px;
 }
 .students__for-free {
-    margin-bottom: 80px;
+    max-width: 280px;
+    margin: 0 auto 50px;
 }
 .students__for-free-title {
-    margin-bottom: 70px;
+    margin-bottom: 0px;
+}
+.students__opportunity-text-block {
+    height: auto;
 }
 .students__opportunity-text-block-title {
     font-size: 20px;
@@ -4149,7 +4500,7 @@ max-width: 280px;
 }
 .students__opportunity-text-block-text {
     font-size: 20px;
-    max-width: 260px;
+    max-width: 240px;
     margin-left: 10px;
 }
 .students__instruction-image-man {
@@ -4157,8 +4508,8 @@ max-width: 280px;
 }
 .students__instruction-image-man-reverse {
     display: block;
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 200px;
+    max-height: 200px;
     position: absolute;
     left: 0;
 }
@@ -4167,30 +4518,39 @@ max-width: 280px;
     max-width: 280px;
     max-height: 200px;
     display: block;
-    top: 53%;
+    top: 50.5%;
+    z-index: 10;
 }
 .students__instruction-image-1-1 {
-    max-width: 280px;
+    max-width: 240px;
     max-height: 200px;
-    top: 61.7%;
-    left: 0;
+    top: 58.5%;
+    left: 5%;
 }
 .students__instruction-image-2 {
-    max-width: 250px;
-    max-height: 260px;
+    max-width: 220px;
+    max-height: 240px;
     position: absolute;
-    right: 5%;
-    left: auto;
-    top: 74%;
+    left: 11%;
+    top: 71%;
 }
 .students__instruction-image-3 {
     max-width: 280px;
     max-height: 200px;
-    top: 90%;
+    top: 86%;
+    left: 0;
+    display: none;
+}
+.students__instruction-image-3-mobile {
+    max-width: 280px;
+    max-height: 200px;
+    top: 86%;
+    left: 2%;
+    display: block;
 }
 .students__instruction-image-arrow-bottom {
     max-width: 80px;
-    top: 70%;
+    top: 66%;
     left: 0;
 }
 .students__instruction-image-arrow-left {
@@ -4205,46 +4565,39 @@ max-width: 280px;
 .students__instruction-image-arrow-bottom-reverse {
     position: absolute;
     max-width: 80px;
-    top: 86%;
-    right: 0;
+    top: 82%;
+    left: 57%;
     display: block;
 }
 .blog__title-title {
     font-size: 48px;
+    margin: 10px 0;
 }
 .blog__switch {
     margin-bottom: 0px;
 }
 .blog-tab-block {
-    max-width: 160px;
+    max-width: 150px;
     max-height: stretch;
 }
 .blog-tab-image {
-    max-width: 140px;
+    max-width: 122px;
     max-height: 80px;
 }
 .blog-tab-title {
     font-size: 12px;
-}
-.blog__tabs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, auto);
 }
 .blog__switch-pagination-inner {
     max-width: 320px;
     max-height: 50px;
 }
 .blog__switch-pagination-page {
-    font-size: 12px;
-    width: 40px;
-    height: 40px;
+    font-size: 20px;
+    width: 33px;
+    height: 33px;
 }
-.blog__switch-arrow-left {
-    max-width: 34px;
-}
-.blog__switch-arrow-right {
-    max-width: 34px;
+.blog__switch-arrow-left, .blog__switch-arrow-right {
+    max-width: 35px;
 }
 .header__lines-black {
     background-color: #1A1A1A;
@@ -4256,8 +4609,12 @@ max-width: 280px;
     font-size: 12px;
     white-space: nowrap;
 }
+.state__associations-block {
+    padding: 5px 10px;
+}
 .state__associations {
     gap: 10px;
+    margin-top: 20px;
 }
 .state__date-text {
     font-size: 12px;
@@ -4315,9 +4672,6 @@ max-width: 280px;
 .blog-tab-title {
     line-height: 20px;
 }
-.main__smartphone-block-inner {
-    margin-right: 30px;
-}
 .footer__links {
     bottom: 7%;
 }
@@ -4327,25 +4681,19 @@ max-width: 280px;
     background-size: 81px 81px;
 }
 .investors__invaste-In-future-text {
-margin-top: 70px;
+margin-top: 55px;
 max-width: 250px;
 }
-.colors__titles-block-right {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-.colors__titles-block-left {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
+.investors__invaste-In-future {
+    max-width: 290px;
+    margin: 0 auto;
 }
 .investors__blot {
     display: block;
     position: absolute;
     max-width: 100px;
     max-height: 100px;
-    top: -6%;
+    top: -2%;
     left: 0;
     z-index: 0;
 }
@@ -4353,7 +4701,7 @@ max-width: 250px;
     overflow: hidden;
     position: relative;
     width: 100%;
-    padding: 50px 10px 20px;
+    padding: 70px 70px 20px 10px;
     z-index: 1;
 }
 .investors__look-for-description {
@@ -4361,14 +4709,170 @@ max-width: 250px;
     z-index: 1;
     overflow: hidden;
 }
-.investors__look-for-text {
-    max-width: 200px;
-}
 .blog__telegram {
     display: block;
-    margin: 50px 0 420px;
+    margin: 20px 0 480px;
 }
 .telegram__title-blue, .telegram__title-white, .telegram__description-block-text, .yellow-text-telegram  {
     text-transform: uppercase;
 }
+.telegram__block-margin {
+    margin-bottom: 385px;
+}
+.telegram__description-block-text {
+    max-width: 250px;
+}
+.students__telegram {
+    display: block;
+    margin-bottom: 480px;
+}
+.blog__sort-title {
+    font-size: 20px;
+    white-space: nowrap;
+}
+.blog__sort-text {
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+.blog-tab-block-inner {
+    padding: 10px;
+}
+.blog__sort-block-english, .blog__sort-learn {
+    gap: 50px;
+}
+.main__learn-title2 {
+    max-width: 300px;
+    margin: 0 0 0 10px;
+}
+.main__learn-block-under {
+    margin: 0;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.main__analyzator-bottom-text-block {
+    margin-top: 300px;
+}
+.footer__social-download-image {
+    max-width: 375px;
+}
+.slider__block-inner {
+    max-width: 230px;
+}
+.slider__block {
+    max-width: 225px;
+    padding: 10px;
+}
+.slider__block:hover {
+    border: 2px solid #676665;
+    background-color: transparent;
+}
+.slider {
+    gap: 10px;
+}
+.main__blog-link-block1 {
+    margin-bottom: 20px;
+}
+.telegram__title-blue {
+    margin-bottom: 20px;
+    text-align: right;
+}
+.colors__titles-block-right {
+    max-width: 320px;
+}
+.colors__titles-block-left {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.blocknote-block-position {
+    max-width: 320px;
+    margin: 0 auto;
+}
+.blocknote-block-position-mobile {
+    display: flex;
+}
+.investors__invaste-In-future-image-mobile {
+    display: block;
+}
+.investors__look-for-text {
+    max-width: 290px;
+    line-height: 23px;
+}
+.no-display-768 {
+    display: none;
+}
+.header {
+    margin-top: 10px;
+}
+.br-display {
+    display: block;
+}
+.school__our-programs-partnerka-image {
+    max-width: 60px;
+    max-height: 60px;
+    top: 5%;
+    right: -6%;
+}
+.blocknote-block-text {
+    max-width: 230px;
+    line-height: 28px;
+}
+.questionnaire__upload-image {
+    max-width: 40px;
+    max-height: 40px;
+}
+.questionnaire__file-text {
+    font-family: "AvenirNextCyr-Medium", sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+.questionnaire__file-content {
+    padding: 0;
+}
+.preview-wrapper {
+    max-width: 70px;
+    max-height: 90px;
+}
+.preview-scroll {
+    gap: 10px;
+}
+.questionnaire__form-button {
+    font-size: 14px;
+    margin-top: 10px;
+}
+.questionnaire__form-button-students {
+    background-color: #9C9895;
+    color: #ADA9A5;
+}
+.blog__switch-pagination-container {
+    margin-top: 20px;
+}
+}
+@media (max-width: 375px) {
+    .footer__title-mobile {
+        top: calc(345px - 100vw);
+    }
+    .footer__download-images {
+        bottom: calc(10px + 150vw);
+    }
+    .main__blog {
+        margin-bottom: calc(215vw - 350px);
+        margin-top: 50px;
+    }
+    .investors__telegram {
+        margin-bottom: calc(230vw - 370px);
+    }
+    .school__telegram  {
+        margin-bottom: calc(230vw - 370px);
+    }
+    .students__telegram {
+        margin-bottom: calc(230vw - 370px);
+    }
+    .blog__telegram {
+        margin-bottom: calc(230vw - 370px);
+    }
+    .main__innovations {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        margin-right: -10px;
+    }
 }

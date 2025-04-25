@@ -9,7 +9,7 @@ const BlocknoteLeft = ({ bgColor, text }) => {
     const image__blocknote = "/images/main__innovations-challenges.svg"
     const main = pathname === "/";
      return (
-        <div className="blocknote-block" style={{ backgroundColor: bgColor }}>
+        <div className={`blocknote-block ${main ? "blocknote-block-main" : ""}`} style={{ backgroundColor: bgColor }}>
             <Image src={image__blocknote} alt='challenges' className={`main__innovations-blocknote-image ${main ? "main__innovations-blocknote-image" : "no-display"}`} width={306} height={240}></Image>
             <div className='blocknote-opacity-right-block'>
             <div className='blocknote-opacity-right blocknote-opacity-right1'></div>

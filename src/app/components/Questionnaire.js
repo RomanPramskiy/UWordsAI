@@ -143,16 +143,16 @@ const handleDrop = (e) => {
 
 
     return (
-        <div className={`questionnaire ${students ? "questionnaire-for-margin" : ""}`}>
+        <div className="questionnaire">
             <div className='questionnaire__wrapper'>
-                <div className='questionnaire__input-block'>
+                <div className={`questionnaire__input-block ${students ? "questionnaire__input-block-students" : ""}`}>
                 <p className={`gray-text-24 ${students ? "no-display" : "questionnaire__input-block-text1"}`} dangerouslySetInnerHTML={{ __html: text }}></p>
                 <p className={`gray-text-24 ${students ? "no-display" : "questionnaire__input-block-text2"}`}>Присоединяйтесь к нам! 📚</p>
-                <p className={`gray-text-24 ${students ? "questionnaire__input-block-text5" : "no-display"}`}>Давай познакомимся! Расскажи о себе и прикрепи к форме фото документа, чтобы начать учиться бесплатно👨‍🎓!</p>
-                    <Link className={`questionnaire__input-block-link ${students ? "no-display" : "questionnaire__input-block-link"}`} href="#">
+                <p className={`gray-text-24 ${students ? "questionnaire__input-block-text5" : "no-display"}`}>Давай познакомимся!<br></br> Расскажи о себе и прикрепи к форме фото документа, чтобы начать учиться бесплатно👨‍🎓!</p>
+                    <Link className={`questionnaire__input-block-link ${students ? "no-display" : ""}`} href="#">
                     <Image className='questionnaire__input-block-image' src="/images/questionnaire__telegram-button.svg" width={740} height={110} alt='telegram-button'></Image>
                     </Link>
-                    <p className='gray-text-24 questionnaire__input-block-text3' dangerouslySetInnerHTML={{ __html: text2 }}></p>
+                    <p className={`gray-text-24 ${students ? "no-display" : "questionnaire__input-block-text3"}`} dangerouslySetInnerHTML={{ __html: text2 }}></p>
                     <p className={`gray-text-24 ${students ? "no-display" : "questionnaire__input-block-text4"}`}>или Заполните форму, расскажите о себе и укажите контактные данные, чтобы начать преподавать с помощью нашего приложения! 👨‍🏫</p>
                 <form className='questionnaire__form' onSubmit={handleSubmit}>
 
@@ -306,12 +306,18 @@ const handleDrop = (e) => {
                           <p className='success-text'>После проверки ваших данных промокод будет отправлен на почту, указанную в анкете.</p>
                         </div>
 
-                    <button className={`questionnaire__form-button ${school ? "questionnaire__form-button-school" : ""}`} type="submit" onClick={handleSubmit}>Отправить</button>
+                    <button className={`questionnaire__form-button 
+                      ${school ? "questionnaire__form-button-school" : ""}
+                      ${students ? "questionnaire__form-button-students" : ""}
+                      `} type="submit" onClick={handleSubmit}>Отправить</button>
                 </form>
                 </div>
                 
                 <div className='questionnaire__image-block'>
-                    <Image src="/images/questionnaire__smartphone-school.svg" alt="smartphone" width={1360} height={1200} className="questionnaire__image-smartphone"/>
+                    <Image src="/images/questionnaire__smartphone-school.svg" alt="smartphone" width={1360} height={1200} className={`questionnaire__image-smartphone 
+                      ${investors ? "questionnaire__image-smartphone-investors" : ""}
+                      ${students ? "questionnaire__image-smartphone-students" : ""}
+                      `}/>
                 </div>
             </div>
         </div>

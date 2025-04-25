@@ -11,25 +11,10 @@ const Footer = () => {
   const investors = pathname === "/investors";
   const blog = pathname === "/blog";
   const states = pathname === "/states";
-  const [src, setSrc] = useState("/images/footer__background.svg");
 
-  useEffect(() => {
-    const updateImageSrc = () => {
-      if (window.innerWidth <= 768) {
-        setSrc("/images/footer__background-mobile.svg");
-      } else {
-        setSrc("/images/footer__background.svg");
-      }
-    };
-
-    updateImageSrc();
-    window.addEventListener("resize", updateImageSrc);
-
-    return () => window.removeEventListener("resize", updateImageSrc);
-  }, []);
 
     return (    
-<footer className={`footer ${school ? "footer-white" : ""}`}>
+<footer className="footer">
 <div className="container container__footer">
     <div className="footer__download-images">
         <Link href="#" className="footer__social-download-link"><Image src="/images/footer__google-play-school.svg" alt="google play" width={400} height={120} className="footer__social-download-image"/></Link>
@@ -78,9 +63,9 @@ const Footer = () => {
         <Link href="#" className="footer__link">команда</Link>
       </div>
         </div>
-      <div className="footer__link-mail-block">
+
         <Link href="#" className="footer__link-mail">uwords.app@mojo.com</Link>
-      </div>
+
     </div>
 </footer>
     )

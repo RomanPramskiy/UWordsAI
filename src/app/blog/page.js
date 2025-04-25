@@ -41,26 +41,36 @@ export default function blog() {
         <div className='blog__sort-first'>
       <div className='blog__sort-top'>
         <div className='blog__sort-block'>
+          <button className='blog__sort-button'>
           <h1 className='blog__sort-title'>все статьи</h1>
           <p className='yellow-text blog__sort-text'>15</p>
+          </button>
         </div>
         <div className='blog__sort-block'>
+        <button className='blog__sort-button'>
           <h1 className='blog__sort-title'>английский язык</h1>
           <p className='yellow-text blog__sort-text'>5</p>
+        </button>
         </div>
       </div>
       <div className='blog__sort-bottom'>
         <div className='blog__sort-block'>
+        <button className='blog__sort-button'>
           <h1 className='blog__sort-title'>AI</h1>
           <p className='yellow-text blog__sort-text'>2</p>
+        </button>
         </div>
         <div className='blog__sort-block'>
+        <button className='blog__sort-button'>
           <h1 className='blog__sort-title'>обучение</h1>
           <p className='yellow-text blog__sort-text'>3</p>
+        </button>
         </div>
         <div className='blog__sort-block'>
+        <button className='blog__sort-button'>
           <h1 className='blog__sort-title'>лайфхаки</h1>
           <p className='yellow-text blog__sort-text'>5</p>
+        </button>
         </div>
       </div>
         </div>
@@ -107,33 +117,55 @@ export default function blog() {
 
 
       <section className="blog__tabs">
+        <div className='blog__tabs-row'>
         <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"}/>
         <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
         <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
+        <div className='blog__tabs-row'>
         <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
-
+        <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
+        <div className='blog__tabs-row'>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"}/>
+        </div>
+        <div className='blog__tabs-row'>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
+        <div className='blog__tabs-row'>
         <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"}/>
         <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
         <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
+      </section>
 
 
+      <section className="blog__tabs-adaptive">
+        <div className='blog__tabs-row'>
         <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"}/>
         <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-
-
-        <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-
-        <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
-        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"} className="blog-tab-display-none"/>
+        </div>
+        <div className='blog__tabs-row'>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
+        <div className='blog__tabs-row'>
+        <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
+        <div className='blog__tabs-row'>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
+        <div className='blog__tabs-row'>
+        <BlogTab blogImage="/images/main__blog-first.svg" text={"Как ИИ помогает учить английский эффективнее?"}/>
+        <BlogTab blogImage="/images/main__blog-second.svg" text={"5 лучших способов выучить английский с AI"}/>
+        </div>
       </section>
 
 

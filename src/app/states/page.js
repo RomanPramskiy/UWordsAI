@@ -10,7 +10,7 @@ export default function Home() {
     <div className="wrapper">
       <Header></Header>
   <main className="main main__state">
-    <div className="container">
+    <div className="container container__states">
 
 
       <section className="state__date">

@@ -23,8 +23,20 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+        setIsOpen(prev => !prev);
+      };
+    
+      useEffect(() => {
+        if (isOpen) {
+          document.body.classList.add('no-scroll');
+        } else {
+          document.body.classList.remove('no-scroll');
+        }
+
+        return () => {
+          document.body.classList.remove('no-scroll');
+        };
+      }, [isOpen]);
     return (
     <header className="header">
         <div className="container container__header">
@@ -67,13 +79,16 @@ const Header = () => {
         </div>
         </div>
     </div>
-    <div className={`header__dropdown-menu ${isOpen ? "active" : ""}`}>
-        <Link href="/" className="header__link header__link-dropdown">О проекте</Link>
-        <Link href="/investors" className="header__link header__link-dropdown">инвесторам</Link>
-        <Link href="/school" className="header__link header__link-dropdown">школам</Link>
-        <Link href="/students" className="header__link header__link-dropdown">учащимся</Link>
-        <Link href="/blog" className="header__link header__link-dropdown">Блог</Link>
-        <Link href="#" className="header__button-download-dropdown">скачать</Link>
+    <div className={`header__dropdown-menu 
+    ${isOpen ? "active" : ""}
+    ${school ? "header__dropdown-menu-school" : ""}
+    `}>
+        <Link href="/" className={`header__link header__link-dropdown ${school ? "header__link-dropdown-school" : ""}`}>О проекте</Link>
+        <Link href="/investors" className={`header__link header__link-dropdown ${school ? "header__link-dropdown-school" : ""}`}>инвесторам</Link>
+        <Link href="/school" className={`header__link header__link-dropdown ${school ? "header__link-dropdown-school" : ""}`}>школам</Link>
+        <Link href="/students" className={`header__link header__link-dropdown ${school ? "header__link-dropdown-school" : ""}`}>учащимся</Link>
+        <Link href="/blog" className={`header__link header__link-dropdown ${school ? "header__link-dropdown-school" : ""}`}>Блог</Link>
+        <Link href="#" className={`header__link header__link-dropdown header__link-dropdown-download ${school ? "header__link-dropdown-school" : ""}`}>скачать</Link>
     </div>
 </header>
     )
