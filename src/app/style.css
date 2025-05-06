@@ -3693,13 +3693,13 @@ color: #F2ECE7;
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 6%;
+        top: 110%;
         left: 50%;
         background-color: #1A1A1A;
         width: 100%;
-        height: 100%;
         max-width: 377px;
         transform: translate(-50%, 0);
+        padding-bottom: 204px;
     }
     .header__dropdown-menu-school {
         background-color: #F2ECE7;
@@ -3708,8 +3708,8 @@ color: #F2ECE7;
         color: #F2ECE7;
         background-color: #1A1A1A;
         padding: 20px;
-        margin-left: auto;
         font-size: 20px;
+        text-align: end;
     }
     .header__link-dropdown-school {
         background-color: #F2ECE7;
@@ -3730,6 +3730,7 @@ color: #F2ECE7;
         justify-content: center;
         align-items: center;
         font-size: 20px;
+        margin-left: auto;
     }
     .header__link-dropdown-download:hover {
         color: #1A1A1A;
@@ -4213,6 +4214,7 @@ max-width: 300px;
 }
 .investors__telegram {
     margin-bottom: 500px;
+    margin-top: 0;
 }
 .questionnaire {
     max-width: 375px;
@@ -4223,7 +4225,7 @@ max-width: 300px;
     margin: 20px 0;
 }
 .investors__contact-with-us {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 .gray-text-24 {
     font-size: 12px;
@@ -4577,12 +4579,12 @@ max-width: 300px;
     margin-bottom: 0px;
 }
 .blog-tab-block {
-    max-width: 150px;
+    max-width: 187.5px;
     max-height: stretch;
 }
 .blog-tab-image {
-    max-width: 122px;
-    max-height: 80px;
+    width: 100%;
+    max-height: 95px;
 }
 .blog-tab-title {
     font-size: 12px;
@@ -4802,6 +4804,7 @@ max-width: 250px;
 }
 .header {
     margin-top: 10px;
+    position: relative;
 }
 .br-display {
     display: block;
@@ -4842,6 +4845,10 @@ max-width: 250px;
 .questionnaire__form-button-students {
     background-color: #9C9895;
     color: #ADA9A5;
+}
+.questionnaire__form-button-investors {
+    background-color: #DCD7D2;
+    color: #B5B1AD;
 }
 .blog__switch-pagination-container {
     margin-top: 20px;

@@ -309,6 +309,7 @@ const handleDrop = (e) => {
                     <button className={`questionnaire__form-button 
                       ${school ? "questionnaire__form-button-school" : ""}
                       ${students ? "questionnaire__form-button-students" : ""}
+                      ${investors ? "questionnaire__form-button-investors" : ""}
                       `} type="submit" onClick={handleSubmit}>Отправить</button>
                 </form>
                 </div>
